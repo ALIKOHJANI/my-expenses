@@ -1,0 +1,30 @@
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\my expenses.exe
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\my expenses.deps.json
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\my expenses.runtimeconfig.json
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\my expenses.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\my expenses.pdb
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\fa-IR\my expenses.resources.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.csproj.AssemblyReference.cache
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.Register.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.csproj.GenerateResource.cache
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.AssemblyInfoInputs.cache
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.AssemblyInfo.cs
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.csproj.CoreCompileInputs.cache
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\fa-IR\my expenses.resources.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\refint\my expenses.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.pdb
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.genruntimeconfig.cache
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\ref\my expenses.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.Properties.Resources.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.MainPage.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.ForgotPassword.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.LogIn.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.LogIn.fa-IR.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.Addcard.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.AddGrouping.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.AddingExpenses.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.Cards.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.Grouping.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.reporting.resources
