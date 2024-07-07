@@ -35,7 +35,7 @@
             PasswordLabel = new Label();
             RegisterButton = new Button();
             ForgotPasswordButton = new Button();
-            NationalIdBox = new MaskedTextBox();
+            NationalIdBox = new TextBox();
             SuspendLayout();
             // 
             // NationalIdLabel
@@ -110,11 +110,10 @@
             // 
             // NationalIdBox
             // 
-            NationalIdBox.Location = new Point(12, 14);
-            NationalIdBox.Mask = "(000)0000000";
+            NationalIdBox.Location = new Point(12, 11);
             NationalIdBox.Name = "NationalIdBox";
             NationalIdBox.Size = new Size(114, 27);
-            NationalIdBox.TabIndex = 19;
+            NationalIdBox.TabIndex = 17;
             // 
             // LogIn
             // 
@@ -156,6 +155,6 @@
         private Label PasswordLabel;
         private Button RegisterButton;
         private Button ForgotPasswordButton;
-        private MaskedTextBox NationalIdBox;
+        private TextBox NationalIdBox;
     }
 }

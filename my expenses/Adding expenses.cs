@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace my_expenses
 {
@@ -16,14 +17,14 @@ namespace my_expenses
         {
             InitializeComponent();
         }
-
+        Epenses epenses = new Epenses();
         private void BackButton_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Hide();
         }
-        Epenses epenses = new Epenses();
+        
         private void AmountBox_TextChanged(object sender, EventArgs e)
         {
             epenses.Amount = Convert.ToInt32(AmountBox.Text);
@@ -42,8 +43,10 @@ namespace my_expenses
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            
             Data.expenses.Add(epenses);
-
+            
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Hide();
@@ -59,7 +62,7 @@ namespace my_expenses
             {
                 GroupingBox.Items.Add(item.Name);
             }
-
+            epenses.cards = CardNumberBox.Text;
         }
     }
 }
