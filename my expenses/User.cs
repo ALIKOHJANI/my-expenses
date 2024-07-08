@@ -16,6 +16,14 @@ namespace my_expenses
         public string NationalId { get; set; }
         public string Gender { get; set; }
 
+        public User (string firtsName, string lastName, string password, string NationalId )
+        {
+            this.FirtsName= firtsName;
+            this.LastName= lastName;
+            this.Password= password;
+            this.NationalId= NationalId;
+
+        }
         
     }
 }
