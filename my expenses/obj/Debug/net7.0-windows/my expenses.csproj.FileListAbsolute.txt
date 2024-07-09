@@ -28,3 +28,5 @@ C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_exp
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.Cards.resources
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.Grouping.resources
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.reporting.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.MonthlyReport.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.SpecificTimeReport.resources

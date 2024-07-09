@@ -23,5 +23,21 @@ namespace my_expenses
             mainPage.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ReportTypeBox.Text== "گزارش کلی")
+            {
+                MonthlyReport monthlyReport = new MonthlyReport();
+                monthlyReport.Show();
+                this.Close();
+            }
+            if (ReportTypeBox.Text == "گزارش بازه دلخواه")
+            {
+                SpecificTimeReport specificTimeReport = new SpecificTimeReport();
+                specificTimeReport.Show();
+                this.Close();
+            }
+        }
     }
 }

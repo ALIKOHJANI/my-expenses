@@ -32,8 +32,8 @@
             SendSMSLabel = new Label();
             SendSMSBox = new TextBox();
             SendSMSbutton = new Button();
-            passwordlabel = new Label();
             ComingBackButton = new Button();
+            passwordBox = new TextBox();
             SuspendLayout();
             // 
             // SendSMSLabel
@@ -66,19 +66,6 @@
             SendSMSbutton.UseVisualStyleBackColor = false;
             SendSMSbutton.Click += SendSMSbutton_Click;
             // 
-            // passwordlabel
-            // 
-            passwordlabel.AutoSize = true;
-            passwordlabel.BackColor = Color.Transparent;
-            passwordlabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            passwordlabel.ForeColor = Color.Transparent;
-            passwordlabel.Location = new Point(22, 120);
-            passwordlabel.Name = "passwordlabel";
-            passwordlabel.Size = new Size(113, 21);
-            passwordlabel.TabIndex = 3;
-            passwordlabel.Text = "رمز بازیابی شده";
-            passwordlabel.TextAlign = ContentAlignment.TopCenter;
-            // 
             // ComingBackButton
             // 
             ComingBackButton.Location = new Point(231, 154);
@@ -89,6 +76,19 @@
             ComingBackButton.UseVisualStyleBackColor = true;
             ComingBackButton.Click += ComingBackButton_Click;
             // 
+            // passwordBox
+            // 
+            passwordBox.BackColor = SystemColors.Control;
+            passwordBox.BorderStyle = BorderStyle.None;
+            passwordBox.Location = new Point(12, 145);
+            passwordBox.Multiline = true;
+            passwordBox.Name = "passwordBox";
+            passwordBox.ReadOnly = true;
+            passwordBox.ShortcutsEnabled = false;
+            passwordBox.Size = new Size(131, 23);
+            passwordBox.TabIndex = 5;
+            passwordBox.TabStop = false;
+            // 
             // ForgotPassword
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -96,8 +96,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(309, 180);
+            Controls.Add(passwordBox);
             Controls.Add(ComingBackButton);
-            Controls.Add(passwordlabel);
             Controls.Add(SendSMSbutton);
             Controls.Add(SendSMSBox);
             Controls.Add(SendSMSLabel);
@@ -116,7 +116,7 @@
         private Label SendSMSLabel;
         private TextBox SendSMSBox;
         private Button SendSMSbutton;
-        private Label passwordlabel;
         private Button ComingBackButton;
+        private TextBox passwordBox;
     }
 }

@@ -14,7 +14,7 @@ namespace my_expenses
 
     public partial class ForgotPassword : Form
     {
-        User user = new User();
+        User user = new User("علی","کوهجانی","Aa13801380","0481110208");
         public ForgotPassword()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace my_expenses
                 {
                     isValid = true;
                     NewPassword = expnsesServis.GenerateNewPassword();
-                    passwordlabel.Text = NewPassword;
+                    passwordBox.Text = NewPassword;
                     item.Password = NewPassword;
 
                     break;

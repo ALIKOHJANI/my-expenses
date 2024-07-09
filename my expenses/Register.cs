@@ -24,7 +24,7 @@ namespace my_expenses
 
         }
 
-        User user = new User();
+        User user = new User("علی","کوهجانی","Aa13801380","0481110208");
         ExpnsesServis Servis = new ExpnsesServis();
         private void Entrybutton_Click(object sender, EventArgs e)
         {
@@ -105,6 +105,7 @@ namespace my_expenses
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Asterisk);
             }
+
         }
 
         private void FirtsNameBox_TextChanged(object sender, EventArgs e)
