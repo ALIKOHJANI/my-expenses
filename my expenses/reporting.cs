@@ -28,8 +28,8 @@ namespace my_expenses
         {
             if (ReportTypeBox.Text== "گزارش کلی")
             {
-                MonthlyReport monthlyReport = new MonthlyReport();
-                monthlyReport.Show();
+                GeneralReport generalReport  = new GeneralReport();
+                generalReport.Show();
                 this.Close();
             }
             if (ReportTypeBox.Text == "گزارش بازه دلخواه")
@@ -38,6 +38,14 @@ namespace my_expenses
                 specificTimeReport.Show();
                 this.Close();
             }
+            if (ReportTypeBox.Text == "گزارش ماهانه")
+            {
+                MonthlyReport monthlyReport = new MonthlyReport();
+                monthlyReport.Show();
+                this.Close();
+
+            }
+
         }
     }
 }
