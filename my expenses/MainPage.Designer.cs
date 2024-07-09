@@ -97,14 +97,17 @@
             // 
             // SumOfExpensesTEXT
             // 
+            SumOfExpensesTEXT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SumOfExpensesTEXT.AutoSize = true;
             SumOfExpensesTEXT.BackColor = Color.Transparent;
             SumOfExpensesTEXT.Font = new Font("Zilla Slab", 18F, FontStyle.Bold, GraphicsUnit.Point);
             SumOfExpensesTEXT.Location = new Point(235, 118);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
+            SumOfExpensesTEXT.RightToLeft = RightToLeft.No;
             SumOfExpensesTEXT.Size = new Size(110, 29);
-            SumOfExpensesTEXT.TabIndex = 5;
+            SumOfExpensesTEXT.TabIndex = 10;
             SumOfExpensesTEXT.Text = "صفر تومان";
+            SumOfExpensesTEXT.TextAlign = ContentAlignment.MiddleRight;
             // 
             // AddingExpensesButton
             // 

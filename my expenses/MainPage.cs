@@ -38,13 +38,12 @@ namespace my_expenses
             }
             foreach (var item in Data.expenses)
             {
-                ListOfExpenses.Items.Add(item.Amount + "" + item.Grouping);
+                ListOfExpenses.Items.Add(":مبلغ"+item.Amount + ":شماره کارت" + item.cards);
 
             }
 
             int sum = Data.expenses.Sum(c => c.Amount);
             SumOfExpensesLabel.Text = sum.ToString();
-            var digit = long.Parse(SumOfExpensesLabel.Text);
             SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
 
 

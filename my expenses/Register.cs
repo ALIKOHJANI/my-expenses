@@ -81,12 +81,13 @@ namespace my_expenses
                     {
                         label1.Text = ("کد ملی نامعتبر است");
                     }
+                    
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("لطفا یک عدد 10 رقمی وارد کنید");
                 }
-
+                break;
             }
 
             if (isValid)
