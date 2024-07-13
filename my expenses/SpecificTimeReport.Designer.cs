@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            number = new Label();
-            InWords = new Label();
+            SumOfExpensesLabel = new Label();
+            SumOfExpensesTEXT = new Label();
             listSpecificTime = new ListBox();
             StartDateTextBox = new MaskedTextBox();
             StartDate = new Label();
@@ -40,34 +39,26 @@
             GroupingBox = new ComboBox();
             label4 = new Label();
             CardBox = new ComboBox();
+            reportingButton = new Button();
             SuspendLayout();
             // 
-            // label1
+            // SumOfExpensesLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(113, 115);
-            label1.Name = "label1";
-            label1.Size = new Size(164, 15);
-            label1.TabIndex = 0;
-            label1.Text = "خرج های انجام شده در بازه 0 تا 0";
+            SumOfExpensesLabel.AutoSize = true;
+            SumOfExpensesLabel.Location = new Point(172, 154);
+            SumOfExpensesLabel.Name = "SumOfExpensesLabel";
+            SumOfExpensesLabel.Size = new Size(44, 15);
+            SumOfExpensesLabel.TabIndex = 1;
+            SumOfExpensesLabel.Text = "0 تومان";
             // 
-            // number
+            // SumOfExpensesTEXT
             // 
-            number.AutoSize = true;
-            number.Location = new Point(172, 154);
-            number.Name = "number";
-            number.Size = new Size(44, 15);
-            number.TabIndex = 1;
-            number.Text = "0 تومان";
-            // 
-            // InWords
-            // 
-            InWords.AutoSize = true;
-            InWords.Location = new Point(155, 187);
-            InWords.Name = "InWords";
-            InWords.Size = new Size(61, 15);
-            InWords.TabIndex = 2;
-            InWords.Text = "صفر تومان";
+            SumOfExpensesTEXT.AutoSize = true;
+            SumOfExpensesTEXT.Location = new Point(155, 187);
+            SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
+            SumOfExpensesTEXT.Size = new Size(61, 15);
+            SumOfExpensesTEXT.TabIndex = 2;
+            SumOfExpensesTEXT.Text = "صفر تومان";
             // 
             // listSpecificTime
             // 
@@ -153,11 +144,22 @@
             CardBox.Size = new Size(138, 23);
             CardBox.TabIndex = 10;
             // 
+            // reportingButton
+            // 
+            reportingButton.Location = new Point(132, 115);
+            reportingButton.Name = "reportingButton";
+            reportingButton.Size = new Size(116, 36);
+            reportingButton.TabIndex = 12;
+            reportingButton.Text = "گزارشگیری";
+            reportingButton.UseVisualStyleBackColor = true;
+            reportingButton.Click += reportingButton_Click;
+            // 
             // SpecificTimeReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(393, 427);
+            Controls.Add(reportingButton);
             Controls.Add(label4);
             Controls.Add(CardBox);
             Controls.Add(label3);
@@ -167,21 +169,18 @@
             Controls.Add(StartDate);
             Controls.Add(StartDateTextBox);
             Controls.Add(listSpecificTime);
-            Controls.Add(InWords);
-            Controls.Add(number);
-            Controls.Add(label1);
+            Controls.Add(SumOfExpensesTEXT);
+            Controls.Add(SumOfExpensesLabel);
             Name = "SpecificTimeReport";
-            Text = "SpecificTimeReport";
+            Text = "گزارش بازه مشخص";
             Load += SpecificTimeReport_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
-        private Label number;
-        private Label InWords;
+        private Label SumOfExpensesLabel;
+        private Label SumOfExpensesTEXT;
         private ListBox listSpecificTime;
         private MaskedTextBox StartDateTextBox;
         private Label StartDate;
@@ -191,5 +190,6 @@
         private ComboBox GroupingBox;
         private Label label4;
         private ComboBox CardBox;
+        private Button reportingButton;
     }
 }

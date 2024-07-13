@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "b4tstwhE/44sh2+59McP9e2TUHGJiuow1rAd5lH2btiJCV83mKGqSIfywdHKfRxuRof2Pg98i7rD9XYJEoEtcg==",
+  "dgSpecHash": "qLK+735szfi1QQTSnFx6gfHyxavB6J7ekUicLPZjDPbNQtKyJybk6dehgzCiNpUMDK5uxpWYp4D/Y6UjdIiw/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\my expenses.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kohjani\\.nuget\\packages\\md.persiandatetime.core\\2.3.5\\md.persiandatetime.core.2.3.5.nupkg.sha512",
+    "C:\\Users\\Kohjani\\.nuget\\packages\\md.persiandatetime.standard\\2.4.1\\md.persiandatetime.standard.2.4.1.nupkg.sha512",
+    "C:\\Users\\Kohjani\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Kohjani\\.nuget\\packages\\persiandatetime.aspnet\\1.0.0\\persiandatetime.aspnet.1.0.0.nupkg.sha512",
+    "C:\\Users\\Kohjani\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Kohjani\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512"
+  ],
   "logs": []
 }

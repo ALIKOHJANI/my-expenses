@@ -31,3 +31,10 @@ C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_exp
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.SpecificTimeReport.resources
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.GeneralReport.resources
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.MonthlyReport.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\MD.PersianDateTime.Core.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\MD.PersianDateTime.Standard.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\Microsoft.OpenApi.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\PersianDateTime.AspNet.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\bin\Debug\net7.0-windows\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my expenses.csproj.CopyComplete

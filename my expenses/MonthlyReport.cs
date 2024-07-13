@@ -33,6 +33,7 @@ namespace my_expenses
             {
                 GroupingBox.Items.Add(item.Name);
             }
+
         }
 
     }

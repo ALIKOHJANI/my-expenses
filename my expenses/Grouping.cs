@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace my_expenses
 {
@@ -38,6 +39,11 @@ namespace my_expenses
                 GroupingBox.Items.Add(item.Name);
             }
 
+        }
+
+        private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GroupingBox.SelectedIndex = GroupingBox.FindString(GroupingBox.Text);
         }
     }
 }

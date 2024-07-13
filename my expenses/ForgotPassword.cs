@@ -14,7 +14,7 @@ namespace my_expenses
 
     public partial class ForgotPassword : Form
     {
-        User user = new User("علی","کوهجانی","Aa13801380","0481110208");
+        User user = new User("علی", "کوهجانی", "Aa13801380", "0481110208");
         public ForgotPassword()
         {
             InitializeComponent();

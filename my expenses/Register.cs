@@ -24,7 +24,7 @@ namespace my_expenses
 
         }
 
-        User user = new User("علی","کوهجانی","Aa13801380","0481110208");
+        User user = new User("علی", "کوهجانی", "Aa13801380", "0481110208");
         ExpnsesServis Servis = new ExpnsesServis();
         private void Entrybutton_Click(object sender, EventArgs e)
         {
@@ -81,7 +81,7 @@ namespace my_expenses
                     {
                         label1.Text = ("کد ملی نامعتبر است");
                     }
-                    
+
                 }
                 catch (Exception)
                 {
@@ -240,7 +240,7 @@ namespace my_expenses
 
         private void NationalIdBox_TextChanged_1(object sender, EventArgs e)
         {
-           
+
         }
 
     }

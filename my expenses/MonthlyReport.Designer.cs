@@ -42,6 +42,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { " فروردین", " اردیبهشت", " خرداد", " تیر", " مرداد", " شهریور", " مهر", " آبان", " آذر", " دی", " بهمن", " اسفند" });
             comboBox1.Location = new Point(151, 12);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
@@ -101,6 +102,7 @@
             listMonthlyReport.ItemHeight = 15;
             listMonthlyReport.Location = new Point(12, 187);
             listMonthlyReport.Name = "listMonthlyReport";
+            listMonthlyReport.RightToLeft = RightToLeft.Yes;
             listMonthlyReport.Size = new Size(343, 199);
             listMonthlyReport.TabIndex = 16;
             // 
@@ -140,7 +142,7 @@
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Name = "MonthlyReport";
-            Text = "MonthlyReport";
+            Text = "گزارش ماهانه";
             Load += MonthlyReport_Load;
             ResumeLayout(false);
             PerformLayout();

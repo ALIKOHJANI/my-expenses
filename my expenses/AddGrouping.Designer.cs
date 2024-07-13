@@ -44,7 +44,6 @@
             NameGroupingBox.Name = "NameGroupingBox";
             NameGroupingBox.Size = new Size(280, 30);
             NameGroupingBox.TabIndex = 0;
-            NameGroupingBox.Text = "نام دسته بندی را وارد کنید";
             NameGroupingBox.TextAlign = HorizontalAlignment.Right;
             NameGroupingBox.TextChanged += NameGroupingBox_TextChanged;
             // 
@@ -54,11 +53,11 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(301, 72);
+            label1.Location = new Point(186, 72);
             label1.Name = "label1";
-            label1.Size = new Size(26, 23);
+            label1.Size = new Size(139, 23);
             label1.TabIndex = 1;
-            label1.Text = "نام ";
+            label1.Text = "نام دسته بندی را وارد کنید";
             // 
             // DescriptionBox
             // 

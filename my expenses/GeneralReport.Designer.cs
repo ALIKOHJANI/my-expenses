@@ -73,7 +73,7 @@
             Controls.Add(SumOfExpensesTEXT);
             Controls.Add(SumOfExpensesLabel);
             Name = "GeneralReport";
-            Text = "GeneralReport";
+            Text = "گزارش کلی";
             Load += GeneralReport_Load;
             ResumeLayout(false);
             PerformLayout();
