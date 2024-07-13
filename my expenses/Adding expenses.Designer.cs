@@ -49,6 +49,7 @@
             AmountBox.Size = new Size(229, 30);
             AmountBox.TabIndex = 0;
             AmountBox.TextChanged += AmountBox_TextChanged;
+            AmountBox.KeyPress += AmountBox_KeyPress;
             // 
             // label1
             // 
@@ -165,7 +166,7 @@
             Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4, 5, 4, 5);
             Name = "AddingExpenses";
-            Text = "Adding_expenses";
+            Text = "اضافه کردن خرج";
             Load += AddingExpenses_Load;
             ResumeLayout(false);
             PerformLayout();

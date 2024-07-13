@@ -80,9 +80,11 @@
             NameLabel.AutoSize = true;
             NameLabel.Location = new Point(485, 9);
             NameLabel.Name = "NameLabel";
+            NameLabel.RightToLeft = RightToLeft.Yes;
             NameLabel.Size = new Size(47, 15);
             NameLabel.TabIndex = 3;
             NameLabel.Text = "نام کاربر";
+            NameLabel.TextAlign = ContentAlignment.TopRight;
             // 
             // SumOfExpensesLabel
             // 
@@ -91,9 +93,11 @@
             SumOfExpensesLabel.Font = new Font("Segoe UI Emoji", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             SumOfExpensesLabel.Location = new Point(281, 82);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
+            SumOfExpensesLabel.RightToLeft = RightToLeft.Yes;
             SumOfExpensesLabel.Size = new Size(31, 36);
             SumOfExpensesLabel.TabIndex = 4;
             SumOfExpensesLabel.Text = "0";
+            SumOfExpensesLabel.TextAlign = ContentAlignment.TopRight;
             // 
             // SumOfExpensesTEXT
             // 
@@ -103,7 +107,7 @@
             SumOfExpensesTEXT.Font = new Font("Zilla Slab", 18F, FontStyle.Bold, GraphicsUnit.Point);
             SumOfExpensesTEXT.Location = new Point(235, 118);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
-            SumOfExpensesTEXT.RightToLeft = RightToLeft.No;
+            SumOfExpensesTEXT.RightToLeft = RightToLeft.Yes;
             SumOfExpensesTEXT.Size = new Size(110, 29);
             SumOfExpensesTEXT.TabIndex = 10;
             SumOfExpensesTEXT.Text = "صفر تومان";
@@ -136,6 +140,7 @@
             ListOfExpenses.ItemHeight = 15;
             ListOfExpenses.Location = new Point(114, 219);
             ListOfExpenses.Name = "ListOfExpenses";
+            ListOfExpenses.RightToLeft = RightToLeft.Yes;
             ListOfExpenses.Size = new Size(389, 169);
             ListOfExpenses.TabIndex = 8;
             ListOfExpenses.SelectedIndexChanged += ListOfExpenses_SelectedIndexChanged;
@@ -204,7 +209,7 @@
             MaximizeBox = false;
             Name = "MainPage";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainPage";
+            Text = "صفحه اصلی";
             FormClosing += MainPage_FormClosing;
             Load += MainPage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

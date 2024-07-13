@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace my_expenses
@@ -24,7 +25,7 @@ namespace my_expenses
             mainPage.Show();
             this.Hide();
         }
-        
+
         private void AmountBox_TextChanged(object sender, EventArgs e)
         {
             epenses.Amount = Convert.ToInt32(AmountBox.Text);
@@ -34,6 +35,7 @@ namespace my_expenses
         private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             epenses.Grouping = GroupingBox.Text;
+            GroupingBox.SelectedIndex = GroupingBox.FindString(GroupingBox.Text);
         }
 
         private void DescriptionBox_TextChanged(object sender, EventArgs e)
@@ -43,10 +45,10 @@ namespace my_expenses
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             Data.expenses.Add(epenses);
-            
+
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Hide();
@@ -58,11 +60,20 @@ namespace my_expenses
             {
                 CardNumberBox.Items.Add(item.cardNumber);
             }
-            foreach(var item in Data.addGroupings)
+            foreach (var item in Data.addGroupings)
             {
                 GroupingBox.Items.Add(item.Name);
             }
             epenses.cards = CardNumberBox.Text;
+        }
+
+        private void AmountBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+
+            {
+                e.Handled = true;
+            }
         }
     }
 }

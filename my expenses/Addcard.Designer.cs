@@ -85,7 +85,6 @@
             CardNameBox.Name = "CardNameBox";
             CardNameBox.Size = new Size(256, 23);
             CardNameBox.TabIndex = 4;
-            CardNameBox.Text = "نام کارت را وارد کنید";
             CardNameBox.TextAlign = HorizontalAlignment.Right;
             CardNameBox.TextChanged += CardNameBox_TextChanged;
             // 
@@ -94,11 +93,11 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("B Nazanin", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(247, 247);
+            label3.Location = new Point(164, 247);
             label3.Name = "label3";
-            label3.Size = new Size(21, 20);
+            label3.Size = new Size(106, 20);
             label3.TabIndex = 5;
-            label3.Text = "نام";
+            label3.Text = "نام کارت را وارد کنید";
             // 
             // Entrybutton
             // 
@@ -136,7 +135,7 @@
             Controls.Add(label1);
             Controls.Add(bankComboBox);
             Name = "Addcard";
-            Text = "Addcard";
+            Text = "اضافه کردن کارت";
             ResumeLayout(false);
             PerformLayout();
         }

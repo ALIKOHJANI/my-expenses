@@ -49,6 +49,7 @@
             GroupingBox.Name = "GroupingBox";
             GroupingBox.Size = new Size(228, 23);
             GroupingBox.TabIndex = 0;
+            GroupingBox.SelectedIndexChanged += GroupingBox_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -142,7 +143,7 @@
             Controls.Add(GroupingBox);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "Grouping";
-            Text = "Report";
+            Text = "دسته بندی ها";
             Load += Grouping_Load;
             ResumeLayout(false);
             PerformLayout();

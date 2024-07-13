@@ -7,12 +7,74 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "my expenses/1.0.0": {
+        "dependencies": {
+          "MD.PersianDateTime.Core": "2.3.5",
+          "PersianDateTime.AspNet": "1.0.0"
+        },
         "runtime": {
           "my expenses.dll": {}
         },
         "resources": {
           "fa-IR/my expenses.resources.dll": {
             "locale": "fa-IR"
+          }
+        }
+      },
+      "MD.PersianDateTime.Core/2.3.5": {
+        "runtime": {
+          "lib/netcoreapp2.0/MD.PersianDateTime.Core.dll": {
+            "assemblyVersion": "2.3.5.0",
+            "fileVersion": "2.3.5.0"
+          }
+        }
+      },
+      "MD.PersianDateTime.Standard/2.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/MD.PersianDateTime.Standard.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          }
+        }
+      },
+      "Microsoft.OpenApi/1.2.3": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        }
+      },
+      "PersianDateTime.AspNet/1.0.0": {
+        "dependencies": {
+          "MD.PersianDateTime.Standard": "2.4.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/PersianDateTime.AspNet.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/6.4.0": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.2.3"
+        },
+        "runtime": {
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "6.4.0.0",
+            "fileVersion": "6.4.0.0"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/6.4.0": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "6.4.0"
+        },
+        "runtime": {
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "6.4.0.0",
+            "fileVersion": "6.4.0.0"
           }
         }
       }
@@ -23,6 +85,48 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MD.PersianDateTime.Core/2.3.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YPhSKavxetpRQggt7Z9wnobz6NUtz6lwbw7P8EnzjC1w2/0d/2EQUdkdVBp7KMWOzXjlJMLp3Hj0v1me6cRDLg==",
+      "path": "md.persiandatetime.core/2.3.5",
+      "hashPath": "md.persiandatetime.core.2.3.5.nupkg.sha512"
+    },
+    "MD.PersianDateTime.Standard/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k7xjJUsV4CB6mzYqy8JVYwHvidu+zDNRxxZqDTh+XK+RUAmF1p3hXiGnrKLz0wiBqzLg2n0DT0yjpOpJZ9UpOQ==",
+      "path": "md.persiandatetime.standard/2.4.1",
+      "hashPath": "md.persiandatetime.standard.2.4.1.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
+      "path": "microsoft.openapi/1.2.3",
+      "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
+    },
+    "PersianDateTime.AspNet/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B7u+J69B1qK8KYTuCLQcqCZupEe6R+JKScTsc+QpxDkrgOJ9E7jE4TA2Tv01Wb/9tZ6c4w2E985D5Ug5ktxx3w==",
+      "path": "persiandatetime.aspnet/1.0.0",
+      "hashPath": "persiandatetime.aspnet.1.0.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/6.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nl4SBgGM+cmthUcpwO/w1lUjevdDHAqRvfUoe4Xp/Uvuzt9mzGUwyFCqa3ODBAcZYBiFoKvrYwz0rabslJvSmQ==",
+      "path": "swashbuckle.aspnetcore.swagger/6.4.0",
+      "hashPath": "swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/6.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lXhcUBVqKrPFAQF7e/ZeDfb5PMgE8n5t6L5B6/BQSpiwxgHzmBcx8Msu42zLYFTvR5PIqE9Q9lZvSQAcwCxJjw==",
+      "path": "swashbuckle.aspnetcore.swaggergen/6.4.0",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512"
     }
   }
 }

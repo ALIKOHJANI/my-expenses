@@ -106,7 +106,7 @@
             MaximizeBox = false;
             Name = "ForgotPassword";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "فراموشی رمز";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -38,7 +38,7 @@ namespace my_expenses
             }
             foreach (var item in Data.expenses)
             {
-                ListOfExpenses.Items.Add(":مبلغ"+item.Amount + ":شماره کارت" + item.cards);
+                ListOfExpenses.Items.Add(":مبلغ" + item.Amount + ":شماره کارت" + item.cards);
 
             }
 
