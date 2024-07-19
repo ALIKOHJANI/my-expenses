@@ -222,7 +222,7 @@
             DateOfBirthBox.Mask = "0000/00/00";
             DateOfBirthBox.Name = "DateOfBirthBox";
             DateOfBirthBox.Size = new Size(123, 23);
-            DateOfBirthBox.TabIndex = 17;
+            DateOfBirthBox.TabIndex = 3;
             DateOfBirthBox.ValidatingType = typeof(DateTime);
             DateOfBirthBox.TextChanged += DateOfBirthBox_TextChanged;
             // 
@@ -232,7 +232,7 @@
             PhoneNumberBox.Mask = "(0000)0000000";
             PhoneNumberBox.Name = "PhoneNumberBox";
             PhoneNumberBox.Size = new Size(123, 23);
-            PhoneNumberBox.TabIndex = 19;
+            PhoneNumberBox.TabIndex = 6;
             PhoneNumberBox.TextAlignChanged += PhoneNumberBox_TextChanged;
             // 
             // NationalIdBox
@@ -240,8 +240,9 @@
             NationalIdBox.Location = new Point(38, 85);
             NationalIdBox.Name = "NationalIdBox";
             NationalIdBox.Size = new Size(123, 23);
-            NationalIdBox.TabIndex = 20;
+            NationalIdBox.TabIndex = 2;
             NationalIdBox.TextChanged += NationalIdBox_TextChanged_1;
+            NationalIdBox.KeyPress += NationalIdBox_KeyPress;
             // 
             // Register
             // 

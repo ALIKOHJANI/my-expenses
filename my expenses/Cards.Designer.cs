@@ -56,6 +56,7 @@
             CardsListBox.ItemHeight = 15;
             CardsListBox.Location = new Point(104, 74);
             CardsListBox.Name = "CardsListBox";
+            CardsListBox.RightToLeft = RightToLeft.Yes;
             CardsListBox.Size = new Size(248, 244);
             CardsListBox.TabIndex = 1;
             CardsListBox.SelectedIndexChanged += CardsListBox_SelectedIndexChanged;

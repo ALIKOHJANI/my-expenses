@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Globalization;
 
 namespace my_expenses
 {
@@ -37,14 +27,30 @@ namespace my_expenses
 
                     TextBox textBox = (TextBox)control;
                     string TextBax = textBox.Text;
-                    if (string.IsNullOrEmpty(textBox.Text))
+                    for (int i = 0; i < this.Controls.Count; i++)
                     {
-                        isValid = false;
+                        if (Controls[i] is TextBox)
+                        {
+                            if (string.IsNullOrEmpty((Controls[i] as TextBox).Text))
+                            {
+                                isValid = false;
+                                (Controls[i] as TextBox).BackColor = Color.Red;
+                            }
+                        }
                     }
-                    else
+                   foreach (User item in Data.Users) 
                     {
-                        Data.Users.Add(user);
+                        if (item.NationalId==NationalIdBox.Text) 
+                        {
+                             isValid=false;
+                            MessageBox.Show("کد ملی تکراری میباشد لطفا کد ملی را درست وارد کنید ");
+                        }
+                        else
+                        {
+                           
+                        }
                     }
+
                 }
                 try
                 {
@@ -92,7 +98,7 @@ namespace my_expenses
 
             if (isValid)
             {
-
+                Data.Users.Add(user);
                 LogIn logIn = new LogIn();
                 logIn.Show();
                 this.Hide();
@@ -190,7 +196,7 @@ namespace my_expenses
             bool isValid = false;
             string birthDateText = DateOfBirthBox.Text;
             DateTime birthDate;
-            if (DateTime.TryParseExact(birthDateText, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out birthDate))
+            if (DateTime.TryParseExact(birthDateText, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out birthDate))
             {
                 user.DateOfBirth = DateOfBirthBox.Text;
                 label1.Visible = false;
@@ -243,6 +249,13 @@ namespace my_expenses
 
         }
 
+        private void NationalIdBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
 

@@ -45,6 +45,7 @@
             bankComboBox.Items.AddRange(new object[] { "ملی", "ملت", "سپه", "تجارت", "پارسیان", "پاسارگاد", "سامان", "سینا", "اینده", "اقتصاد نوین", "رفاه", "رسالت", "مهر اقتصاد", "صادرات", "شهر", "ارمان", "قوامین", "ایران زمین", "کشاورزی", "کوثر", "نور", "توسعه و تعاون", "تات", "پست بانک", "مهر ایران", "مرکزی", "خاورمیانه", "کارافرین", "حکمت ایرنیان", "گردشگری", "دی", "انصار", "مسکن", "بلو بانک", "سرمایه" });
             bankComboBox.Location = new Point(12, 84);
             bankComboBox.Name = "bankComboBox";
+            bankComboBox.RightToLeft = RightToLeft.Yes;
             bankComboBox.Size = new Size(256, 23);
             bankComboBox.TabIndex = 0;
             bankComboBox.SelectedIndexChanged += bankComboBox_SelectedIndexChanged;
@@ -67,6 +68,7 @@
             CardNumberBox.Size = new Size(256, 23);
             CardNumberBox.TabIndex = 2;
             CardNumberBox.TextChanged += CardNumberBox_TextChanged;
+            CardNumberBox.KeyPress += CardNumberBox_KeyPress;
             // 
             // label2
             // 
@@ -83,10 +85,12 @@
             // 
             CardNameBox.Location = new Point(12, 270);
             CardNameBox.Name = "CardNameBox";
+            CardNameBox.RightToLeft = RightToLeft.Yes;
             CardNameBox.Size = new Size(256, 23);
             CardNameBox.TabIndex = 4;
             CardNameBox.TextAlign = HorizontalAlignment.Right;
             CardNameBox.TextChanged += CardNameBox_TextChanged;
+            CardNameBox.KeyPress += CardNameBox_KeyPress;
             // 
             // label3
             // 

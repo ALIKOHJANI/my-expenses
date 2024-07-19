@@ -42,10 +42,12 @@
             NameGroupingBox.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             NameGroupingBox.Location = new Point(45, 98);
             NameGroupingBox.Name = "NameGroupingBox";
+            NameGroupingBox.RightToLeft = RightToLeft.Yes;
             NameGroupingBox.Size = new Size(280, 30);
             NameGroupingBox.TabIndex = 0;
             NameGroupingBox.TextAlign = HorizontalAlignment.Right;
             NameGroupingBox.TextChanged += NameGroupingBox_TextChanged;
+            NameGroupingBox.KeyPress += NameGroupingBox_KeyPress;
             // 
             // label1
             // 
@@ -64,10 +66,12 @@
             DescriptionBox.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             DescriptionBox.Location = new Point(45, 181);
             DescriptionBox.Name = "DescriptionBox";
+            DescriptionBox.RightToLeft = RightToLeft.Yes;
             DescriptionBox.Size = new Size(280, 96);
             DescriptionBox.TabIndex = 2;
             DescriptionBox.Text = "";
             DescriptionBox.TextChanged += DescriptionBox_TextChanged;
+            DescriptionBox.KeyPress += DescriptionBox_KeyPress;
             // 
             // label2
             // 

@@ -23,7 +23,7 @@ namespace my_expenses
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void AmountBox_TextChanged(object sender, EventArgs e)
@@ -51,7 +51,8 @@ namespace my_expenses
 
             MainPage mainPage = new MainPage();
             mainPage.Show();
-            this.Hide();
+            this.Close();
+            
         }
 
         private void AddingExpenses_Load(object sender, EventArgs e)

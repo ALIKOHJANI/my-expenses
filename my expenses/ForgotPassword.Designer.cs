@@ -53,6 +53,7 @@
             SendSMSBox.Name = "SendSMSBox";
             SendSMSBox.Size = new Size(131, 23);
             SendSMSBox.TabIndex = 1;
+            SendSMSBox.KeyPress += SendSMSBox_KeyPress;
             // 
             // SendSMSbutton
             // 
@@ -78,16 +79,11 @@
             // 
             // passwordBox
             // 
-            passwordBox.BackColor = SystemColors.Control;
-            passwordBox.BorderStyle = BorderStyle.None;
             passwordBox.Location = new Point(12, 145);
-            passwordBox.Multiline = true;
             passwordBox.Name = "passwordBox";
             passwordBox.ReadOnly = true;
-            passwordBox.ShortcutsEnabled = false;
             passwordBox.Size = new Size(131, 23);
             passwordBox.TabIndex = 5;
-            passwordBox.TabStop = false;
             // 
             // ForgotPassword
             // 

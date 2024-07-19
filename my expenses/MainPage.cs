@@ -1,8 +1,4 @@
-﻿using System.Data;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-
-namespace my_expenses
+﻿namespace my_expenses
 {
     public partial class MainPage : Form
     {
@@ -16,8 +12,9 @@ namespace my_expenses
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             LogIn logIn = new LogIn();
+
             logIn.Show();
-            logIn.Close();
+
         }
 
         private void AccountExitbutton_Click(object sender, EventArgs e)
@@ -33,7 +30,7 @@ namespace my_expenses
         {
             foreach (var item in Data.Users)
             {
-                NameLabel.Text = item.FirtsName + "" + item.LastName;
+                NameLabel.Text = item.FirtsName + " " + item.LastName;
 
             }
             foreach (var item in Data.expenses)
@@ -44,7 +41,7 @@ namespace my_expenses
 
             int sum = Data.expenses.Sum(c => c.Amount);
             SumOfExpensesLabel.Text = sum.ToString();
-            SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
+            SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + "" + "تومان";
 
 
         }
@@ -62,18 +59,22 @@ namespace my_expenses
         {
             reporting reporting = new reporting();
             reporting.Show();
+            this.Close();
         }
 
         private void cardbutton_Click(object sender, EventArgs e)
         {
             Cards cards = new Cards();
             cards.Show();
+            this.Close();
+
         }
 
         private void Grouping_Click(object sender, EventArgs e)
         {
             Grouping grouping = new Grouping();
             grouping.Show();
+            this.Close();
         }
 
         private void ListOfExpenses_SelectedIndexChanged(object sender, EventArgs e)

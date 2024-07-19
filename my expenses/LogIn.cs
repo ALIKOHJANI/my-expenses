@@ -33,14 +33,14 @@
                     case "7777777777":
                     case "8888888888":
                     case "9999999999":
-                        MessageBox.Show ( "کد ملی وارد شده صحیح نمی باشد");
+                        MessageBox.Show("کد ملی وارد شده صحیح نمی باشد");
                         break;
                 }
                 int num3 = ((((((((numArray[0] * 10) + (numArray[1] * 9)) + (numArray[2] * 8)) + (numArray[3] * 7)) + (numArray[4] * 6)) + (numArray[5] * 5)) + (numArray[6] * 4)) + (numArray[7] * 3)) + (numArray[8] * 2);
                 int num4 = num3 - ((num3 / 11) * 11);
                 if ((((num4 == 0) && (num2 == num4)) || ((num4 == 1) && (num2 == 1))) || ((num4 > 1) && (num2 == Math.Abs((int)(num4 - 11)))))
                 {
-                    MessageBox.Show ("کد ملی صحیح می باشد");
+
                 }
                 else
                 {
@@ -68,7 +68,7 @@
             if (isValid)
             {
 
-                MessageBox.Show("خوش آمدید!");
+                MessageBox.Show("!خوش آمدید");
                 MainPage mainPage = new MainPage();
                 mainPage.Show();
                 this.Hide();
@@ -84,7 +84,7 @@
 
         private void ForgotPasswordButton_Click(object sender, EventArgs e)
         {
-            
+
             ForgotPassword forgotPassword = new ForgotPassword();
             forgotPassword.Show();
             this.Hide();
@@ -99,6 +99,12 @@
 
         }
 
-
+        private void NationalIdBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
