@@ -37,6 +37,7 @@
             listMonthlyReport = new ListBox();
             SumOfExpensesTEXT = new Label();
             SumOfExpensesLabel = new Label();
+            BackButton = new Button();
             SuspendLayout();
             // 
             // comboBox1
@@ -93,6 +94,7 @@
             GroupingBox.Items.AddRange(new object[] { "پوشاک", "خوراکی", "وسایل خانه", "تفریح", "حمل و نقل", "خرید روزانه", "بهداشت و سلامت", "اموزش و تحصیلات" });
             GroupingBox.Location = new Point(204, 85);
             GroupingBox.Name = "GroupingBox";
+            GroupingBox.RightToLeft = RightToLeft.Yes;
             GroupingBox.Size = new Size(151, 23);
             GroupingBox.TabIndex = 12;
             // 
@@ -127,11 +129,22 @@
             SumOfExpensesLabel.TabIndex = 17;
             SumOfExpensesLabel.Text = "0تومان ";
             // 
+            // BackButton
+            // 
+            BackButton.Location = new Point(12, 12);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(83, 31);
+            BackButton.TabIndex = 19;
+            BackButton.Text = "بازگشت";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
+            // 
             // MonthlyReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(367, 398);
+            Controls.Add(BackButton);
             Controls.Add(SumOfExpensesTEXT);
             Controls.Add(SumOfExpensesLabel);
             Controls.Add(listMonthlyReport);
@@ -159,5 +172,6 @@
         private ListBox listMonthlyReport;
         private Label SumOfExpensesTEXT;
         private Label SumOfExpensesLabel;
+        private Button BackButton;
     }
 }

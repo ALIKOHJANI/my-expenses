@@ -40,6 +40,7 @@
             label4 = new Label();
             CardBox = new ComboBox();
             reportingButton = new Button();
+            BackButton = new Button();
             SuspendLayout();
             // 
             // SumOfExpensesLabel
@@ -122,6 +123,7 @@
             GroupingBox.Items.AddRange(new object[] { "پوشاک", "خوراکی", "وسایل خانه", "تفریح", "حمل و نقل", "خرید روزانه", "بهداشت و سلامت", "اموزش و تحصیلات" });
             GroupingBox.Location = new Point(230, 76);
             GroupingBox.Name = "GroupingBox";
+            GroupingBox.RightToLeft = RightToLeft.Yes;
             GroupingBox.Size = new Size(151, 23);
             GroupingBox.TabIndex = 8;
             // 
@@ -154,11 +156,22 @@
             reportingButton.UseVisualStyleBackColor = true;
             reportingButton.Click += reportingButton_Click;
             // 
+            // BackButton
+            // 
+            BackButton.Location = new Point(298, 421);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(83, 31);
+            BackButton.TabIndex = 13;
+            BackButton.Text = "بازگشت";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
+            // 
             // SpecificTimeReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(393, 427);
+            ClientSize = new Size(393, 454);
+            Controls.Add(BackButton);
             Controls.Add(reportingButton);
             Controls.Add(label4);
             Controls.Add(CardBox);
@@ -191,5 +204,6 @@
         private Label label4;
         private ComboBox CardBox;
         private Button reportingButton;
+        private Button BackButton;
     }
 }

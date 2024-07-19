@@ -50,5 +50,15 @@ namespace my_expenses
             logIn.Show();
             this.Close();
         }
+
+        private void SendSMSBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

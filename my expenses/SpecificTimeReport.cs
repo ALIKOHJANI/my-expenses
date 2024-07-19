@@ -26,12 +26,14 @@ namespace my_expenses
         {
 
             PersianCalendar pc = new PersianCalendar();
+            var startDateTimeSplit = StartDateTextBox.Text.Split('/');
+            var endDateTimeSplit = EndDateTextBox.Text.Split('/');
 
-            DateTime dts = new DateTime(Convert.ToChar(StartDateTextBox));
-            DateTime dte = new DateTime(Convert.ToChar(EndDateTextBox));
+            DateTime StartDateTimeSplit = new DateTime(Convert.ToInt32(startDateTimeSplit[0]), Convert.ToInt32(startDateTimeSplit[1]), Convert.ToInt32(startDateTimeSplit[2]), pc);
+            DateTime EndDateTimeSplit = new DateTime(Convert.ToInt32(endDateTimeSplit[0]), Convert.ToInt32(endDateTimeSplit[1]), Convert.ToInt32(endDateTimeSplit[2]), pc);
             foreach (var item in Data.expenses)
             {
-                if (item.Date >= dts && item.Date <= dte)
+                if (item.Date >= StartDateTimeSplit && item.Date <= EndDateTimeSplit)
                 {
                     listSpecificTime.Items.Add(":مبلغ" + item.Amount + ":شماره کارت" + item.cards);
                     int sum = Data.expenses.Sum(c => c.Amount);
@@ -41,6 +43,13 @@ namespace my_expenses
                 }
             }
 
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            reporting reporting = new reporting();
+            reporting.Show();
+            this.Close();
         }
     }
 }

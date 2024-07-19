@@ -21,7 +21,7 @@ namespace my_expenses
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -47,6 +47,7 @@
             GroupingBox.Items.AddRange(new object[] { "پوشاک", "خوراکی", "وسایل خانه", "تفریح", "حمل و نقل", "خرید روزانه", "بهداشت و سلامت", "اموزش و تحصیلات" });
             GroupingBox.Location = new Point(113, 88);
             GroupingBox.Name = "GroupingBox";
+            GroupingBox.RightToLeft = RightToLeft.Yes;
             GroupingBox.Size = new Size(228, 23);
             GroupingBox.TabIndex = 0;
             GroupingBox.SelectedIndexChanged += GroupingBox_SelectedIndexChanged;
@@ -79,6 +80,7 @@
             GroupingListBox.ItemHeight = 15;
             GroupingListBox.Location = new Point(95, 187);
             GroupingListBox.Name = "GroupingListBox";
+            GroupingListBox.RightToLeft = RightToLeft.Yes;
             GroupingListBox.Size = new Size(206, 199);
             GroupingListBox.TabIndex = 3;
             // 

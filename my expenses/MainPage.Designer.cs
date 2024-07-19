@@ -77,41 +77,39 @@
             // 
             // NameLabel
             // 
-            NameLabel.AutoSize = true;
-            NameLabel.Location = new Point(485, 9);
+            NameLabel.BackColor = Color.Transparent;
+            NameLabel.Location = new Point(403, 8);
             NameLabel.Name = "NameLabel";
-            NameLabel.RightToLeft = RightToLeft.Yes;
-            NameLabel.Size = new Size(47, 15);
+            NameLabel.RightToLeft = RightToLeft.No;
+            NameLabel.Size = new Size(129, 15);
             NameLabel.TabIndex = 3;
             NameLabel.Text = "نام کاربر";
             NameLabel.TextAlign = ContentAlignment.TopRight;
             // 
             // SumOfExpensesLabel
             // 
-            SumOfExpensesLabel.AutoSize = true;
             SumOfExpensesLabel.BackColor = Color.Transparent;
             SumOfExpensesLabel.Font = new Font("Segoe UI Emoji", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            SumOfExpensesLabel.Location = new Point(281, 82);
+            SumOfExpensesLabel.Location = new Point(114, 82);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
             SumOfExpensesLabel.RightToLeft = RightToLeft.Yes;
-            SumOfExpensesLabel.Size = new Size(31, 36);
+            SumOfExpensesLabel.Size = new Size(325, 36);
             SumOfExpensesLabel.TabIndex = 4;
             SumOfExpensesLabel.Text = "0";
-            SumOfExpensesLabel.TextAlign = ContentAlignment.TopRight;
+            SumOfExpensesLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // SumOfExpensesTEXT
             // 
-            SumOfExpensesTEXT.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SumOfExpensesTEXT.AutoSize = true;
+            SumOfExpensesTEXT.Anchor = AnchorStyles.None;
             SumOfExpensesTEXT.BackColor = Color.Transparent;
             SumOfExpensesTEXT.Font = new Font("Zilla Slab", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            SumOfExpensesTEXT.Location = new Point(235, 118);
+            SumOfExpensesTEXT.Location = new Point(114, 118);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
             SumOfExpensesTEXT.RightToLeft = RightToLeft.Yes;
-            SumOfExpensesTEXT.Size = new Size(110, 29);
+            SumOfExpensesTEXT.Size = new Size(418, 29);
             SumOfExpensesTEXT.TabIndex = 10;
             SumOfExpensesTEXT.Text = "صفر تومان";
-            SumOfExpensesTEXT.TextAlign = ContentAlignment.MiddleRight;
+            SumOfExpensesTEXT.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // AddingExpensesButton
             // 

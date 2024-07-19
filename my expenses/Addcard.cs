@@ -47,5 +47,26 @@ namespace my_expenses
             cards.Show();
             this.Close();
         }
+
+        private void CardNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar > 199 || e.KeyChar < 237)
+        && (e.KeyChar < 1574 || e.KeyChar > 1594 && e.KeyChar < 1601 || e.KeyChar > 1608)
+        && e.KeyChar != 1662 && e.KeyChar != 1668 && e.KeyChar != 1670 && e.KeyChar != 1705
+        && e.KeyChar != 1711
+        && e.KeyChar != 1740 && e.KeyChar != 8 && e.KeyChar != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CardNumberBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
+

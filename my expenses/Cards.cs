@@ -20,22 +20,22 @@ namespace my_expenses
         private void BackButton_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
-            mainPage.Show();
-            this.Hide();
+
+            this.Close();
         }
 
         private void Cardsbutton_Click(object sender, EventArgs e)
         {
             Addcard addcard = new Addcard();
             addcard.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Cards_Load(object sender, EventArgs e)
         {
             foreach (var item in Data.Addcards)
             {
-                CardsListBox.Items.Add(item.cardNumber);
+                CardsListBox.Items.Add(item.cardNumber+":شماره کارت");
             }
         }
 
@@ -48,7 +48,7 @@ namespace my_expenses
         {
             Addcard addcard = new Addcard();
             addcard.Show();
-             this.Hide();
+            this.Close();
         }
     }
 }

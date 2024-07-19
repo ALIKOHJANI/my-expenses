@@ -32,5 +32,12 @@ namespace my_expenses
 
             SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            reporting reporting = new reporting();
+            reporting.Show();
+            this.Close();
+        }
     }
 }

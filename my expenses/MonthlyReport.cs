@@ -36,6 +36,12 @@ namespace my_expenses
 
         }
 
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            reporting reporting = new reporting();
+            reporting.Show();
+            this.Close();
+        }
     }
 }
 

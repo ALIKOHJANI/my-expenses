@@ -113,7 +113,8 @@
             NationalIdBox.Location = new Point(12, 11);
             NationalIdBox.Name = "NationalIdBox";
             NationalIdBox.Size = new Size(114, 27);
-            NationalIdBox.TabIndex = 17;
+            NationalIdBox.TabIndex = 0;
+            NationalIdBox.KeyPress += NationalIdBox_KeyPress;
             // 
             // LogIn
             // 
@@ -138,12 +139,12 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             ImeMode = ImeMode.Off;
+            IsMdiContainer = true;
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "LogIn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ورود";
-            TransparencyKey = SystemColors.ActiveBorder;
             ResumeLayout(false);
             PerformLayout();
         }

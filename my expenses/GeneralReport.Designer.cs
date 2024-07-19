@@ -31,6 +31,7 @@
             SumOfExpensesLabel = new Label();
             SumOfExpensesTEXT = new Label();
             listGeneralReport = new ListBox();
+            BackButton = new Button();
             SuspendLayout();
             // 
             // SumOfExpensesLabel
@@ -61,14 +62,26 @@
             listGeneralReport.ItemHeight = 15;
             listGeneralReport.Location = new Point(12, 109);
             listGeneralReport.Name = "listGeneralReport";
+            listGeneralReport.RightToLeft = RightToLeft.Yes;
             listGeneralReport.Size = new Size(364, 169);
             listGeneralReport.TabIndex = 2;
+            // 
+            // BackButton
+            // 
+            BackButton.Location = new Point(12, 12);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(83, 31);
+            BackButton.TabIndex = 3;
+            BackButton.Text = "بازگشت";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // GeneralReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(388, 290);
+            Controls.Add(BackButton);
             Controls.Add(listGeneralReport);
             Controls.Add(SumOfExpensesTEXT);
             Controls.Add(SumOfExpensesLabel);
@@ -84,5 +97,6 @@
         private Label SumOfExpensesLabel;
         private Label SumOfExpensesTEXT;
         private ListBox listGeneralReport;
+        private Button BackButton;
     }
 }
