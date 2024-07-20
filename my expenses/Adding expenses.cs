@@ -52,7 +52,7 @@ namespace my_expenses
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Close();
-            
+
         }
 
         private void AddingExpenses_Load(object sender, EventArgs e)

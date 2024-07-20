@@ -36,25 +36,24 @@
             // 
             // SumOfExpensesLabel
             // 
-            SumOfExpensesLabel.AutoSize = true;
-            SumOfExpensesLabel.Location = new Point(167, 32);
+            SumOfExpensesLabel.Location = new Point(12, 46);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
-            SumOfExpensesLabel.Size = new Size(44, 15);
+            SumOfExpensesLabel.Size = new Size(364, 15);
             SumOfExpensesLabel.TabIndex = 0;
             SumOfExpensesLabel.Text = "0تومان ";
+            SumOfExpensesLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // SumOfExpensesTEXT
             // 
-            SumOfExpensesTEXT.AutoSize = true;
             SumOfExpensesTEXT.FlatStyle = FlatStyle.Flat;
             SumOfExpensesTEXT.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            SumOfExpensesTEXT.Location = new Point(152, 63);
+            SumOfExpensesTEXT.Location = new Point(12, 76);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
             SumOfExpensesTEXT.RightToLeft = RightToLeft.Yes;
-            SumOfExpensesTEXT.Size = new Size(68, 16);
+            SumOfExpensesTEXT.Size = new Size(364, 16);
             SumOfExpensesTEXT.TabIndex = 1;
             SumOfExpensesTEXT.Text = "صفر تومان";
-            SumOfExpensesTEXT.TextAlign = ContentAlignment.MiddleRight;
+            SumOfExpensesTEXT.TextAlign = ContentAlignment.TopCenter;
             // 
             // listGeneralReport
             // 
@@ -89,7 +88,6 @@
             Text = "گزارش کلی";
             Load += GeneralReport_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

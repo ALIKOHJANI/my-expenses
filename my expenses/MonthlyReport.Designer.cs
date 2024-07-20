@@ -71,6 +71,8 @@
             // 
             // CardBox
             // 
+            CardBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CardBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             CardBox.FormattingEnabled = true;
             CardBox.Location = new Point(12, 85);
             CardBox.Name = "CardBox";
@@ -90,6 +92,8 @@
             // 
             // GroupingBox
             // 
+            GroupingBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            GroupingBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             GroupingBox.FormattingEnabled = true;
             GroupingBox.Items.AddRange(new object[] { "پوشاک", "خوراکی", "وسایل خانه", "تفریح", "حمل و نقل", "خرید روزانه", "بهداشت و سلامت", "اموزش و تحصیلات" });
             GroupingBox.Location = new Point(204, 85);
@@ -110,24 +114,23 @@
             // 
             // SumOfExpensesTEXT
             // 
-            SumOfExpensesTEXT.AutoSize = true;
             SumOfExpensesTEXT.FlatStyle = FlatStyle.Flat;
             SumOfExpensesTEXT.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            SumOfExpensesTEXT.Location = new Point(151, 151);
+            SumOfExpensesTEXT.Location = new Point(12, 151);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
-            SumOfExpensesTEXT.Size = new Size(68, 16);
+            SumOfExpensesTEXT.Size = new Size(343, 16);
             SumOfExpensesTEXT.TabIndex = 18;
             SumOfExpensesTEXT.Text = "صفر تومان";
             SumOfExpensesTEXT.TextAlign = ContentAlignment.TopCenter;
             // 
             // SumOfExpensesLabel
             // 
-            SumOfExpensesLabel.AutoSize = true;
-            SumOfExpensesLabel.Location = new Point(161, 118);
+            SumOfExpensesLabel.Location = new Point(12, 118);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
-            SumOfExpensesLabel.Size = new Size(44, 15);
+            SumOfExpensesLabel.Size = new Size(343, 15);
             SumOfExpensesLabel.TabIndex = 17;
             SumOfExpensesLabel.Text = "0تومان ";
+            SumOfExpensesLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // BackButton
             // 

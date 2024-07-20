@@ -26,9 +26,9 @@ namespace my_expenses
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ReportTypeBox.Text== "گزارش کلی")
+            if (ReportTypeBox.Text == "گزارش کلی")
             {
-                GeneralReport generalReport  = new GeneralReport();
+                GeneralReport generalReport = new GeneralReport();
                 generalReport.Show();
                 this.Close();
             }

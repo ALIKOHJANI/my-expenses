@@ -34,8 +34,8 @@
             label2 = new Label();
             GroupingListBox = new ListBox();
             addbutton = new Button();
-            label3 = new Label();
-            label4 = new Label();
+            ErrorLabel1 = new Label();
+            ErrorLabel2 = new Label();
             Back = new Button();
             SuspendLayout();
             // 
@@ -96,27 +96,27 @@
             addbutton.UseVisualStyleBackColor = false;
             addbutton.Click += addbutton_Click;
             // 
-            // label3
+            // ErrorLabel1
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("B Nazanin", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(137, 389);
-            label3.Name = "label3";
-            label3.Size = new Size(108, 24);
-            label3.TabIndex = 5;
-            label3.Text = "!دسته بندی ندارید ";
+            ErrorLabel1.AutoSize = true;
+            ErrorLabel1.BackColor = Color.Transparent;
+            ErrorLabel1.Font = new Font("B Nazanin", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            ErrorLabel1.Location = new Point(137, 389);
+            ErrorLabel1.Name = "ErrorLabel1";
+            ErrorLabel1.Size = new Size(108, 24);
+            ErrorLabel1.TabIndex = 5;
+            ErrorLabel1.Text = "!دسته بندی ندارید ";
             // 
-            // label4
+            // ErrorLabel2
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(95, 413);
-            label4.Name = "label4";
-            label4.Size = new Size(206, 23);
-            label4.TabIndex = 6;
-            label4.Text = "میتوانید برای خود دسته بندی ایجاد کنید";
+            ErrorLabel2.AutoSize = true;
+            ErrorLabel2.BackColor = Color.Transparent;
+            ErrorLabel2.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ErrorLabel2.Location = new Point(95, 413);
+            ErrorLabel2.Name = "ErrorLabel2";
+            ErrorLabel2.Size = new Size(206, 23);
+            ErrorLabel2.TabIndex = 6;
+            ErrorLabel2.Text = "میتوانید برای خود دسته بندی ایجاد کنید";
             // 
             // Back
             // 
@@ -136,8 +136,8 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(366, 470);
             Controls.Add(Back);
-            Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(ErrorLabel2);
+            Controls.Add(ErrorLabel1);
             Controls.Add(addbutton);
             Controls.Add(GroupingListBox);
             Controls.Add(label2);
@@ -158,8 +158,8 @@
         private Label label2;
         private ListBox GroupingListBox;
         private Button addbutton;
-        private Label label3;
-        private Label label4;
+        private Label ErrorLabel1;
+        private Label ErrorLabel2;
         private Button Back;
     }
 }

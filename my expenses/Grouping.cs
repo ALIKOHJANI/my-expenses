@@ -33,10 +33,25 @@ namespace my_expenses
 
         private void Grouping_Load(object sender, EventArgs e)
         {
+            bool isValid = true;
             foreach (var item in Data.addGroupings)
             {
                 GroupingListBox.Items.Add(item.Name);
                 GroupingBox.Items.Add(item.Name);
+            }
+            if (isValid)
+            {
+
+                ErrorLabel1.Text = "!کارت بانکی ندارید";
+                ErrorLabel2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
+               
+            }
+            else
+            {
+                ErrorLabel1.Text = "";
+                ErrorLabel2.Text = "";
+                
+
             }
 
         }

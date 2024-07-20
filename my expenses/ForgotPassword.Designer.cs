@@ -33,7 +33,7 @@
             SendSMSBox = new TextBox();
             SendSMSbutton = new Button();
             ComingBackButton = new Button();
-            passwordBox = new TextBox();
+            NationalIdBox = new TextBox();
             SuspendLayout();
             // 
             // SendSMSLabel
@@ -77,13 +77,13 @@
             ComingBackButton.UseVisualStyleBackColor = true;
             ComingBackButton.Click += ComingBackButton_Click;
             // 
-            // passwordBox
+            // NationalIdBox
             // 
-            passwordBox.Location = new Point(12, 145);
-            passwordBox.Name = "passwordBox";
-            passwordBox.ReadOnly = true;
-            passwordBox.Size = new Size(131, 23);
-            passwordBox.TabIndex = 5;
+            NationalIdBox.Location = new Point(12, 145);
+            NationalIdBox.Name = "NationalIdBox";
+            NationalIdBox.ReadOnly = true;
+            NationalIdBox.Size = new Size(131, 23);
+            NationalIdBox.TabIndex = 5;
             // 
             // ForgotPassword
             // 
@@ -92,7 +92,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(309, 180);
-            Controls.Add(passwordBox);
+            Controls.Add(NationalIdBox);
             Controls.Add(ComingBackButton);
             Controls.Add(SendSMSbutton);
             Controls.Add(SendSMSBox);
@@ -113,6 +113,6 @@
         private TextBox SendSMSBox;
         private Button SendSMSbutton;
         private Button ComingBackButton;
-        private TextBox passwordBox;
+        private TextBox NationalIdBox;
     }
 }
