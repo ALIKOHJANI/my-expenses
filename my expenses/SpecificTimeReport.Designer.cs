@@ -45,21 +45,21 @@
             // 
             // SumOfExpensesLabel
             // 
-            SumOfExpensesLabel.AutoSize = true;
-            SumOfExpensesLabel.Location = new Point(172, 154);
+            SumOfExpensesLabel.Location = new Point(12, 154);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
-            SumOfExpensesLabel.Size = new Size(44, 15);
+            SumOfExpensesLabel.Size = new Size(369, 15);
             SumOfExpensesLabel.TabIndex = 1;
             SumOfExpensesLabel.Text = "0 تومان";
+            SumOfExpensesLabel.TextAlign = ContentAlignment.TopCenter;
             // 
             // SumOfExpensesTEXT
             // 
-            SumOfExpensesTEXT.AutoSize = true;
-            SumOfExpensesTEXT.Location = new Point(155, 187);
+            SumOfExpensesTEXT.Location = new Point(12, 187);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
-            SumOfExpensesTEXT.Size = new Size(61, 15);
+            SumOfExpensesTEXT.Size = new Size(369, 15);
             SumOfExpensesTEXT.TabIndex = 2;
             SumOfExpensesTEXT.Text = "صفر تومان";
+            SumOfExpensesTEXT.TextAlign = ContentAlignment.TopCenter;
             // 
             // listSpecificTime
             // 
@@ -100,7 +100,7 @@
             // EndDateLabel
             // 
             EndDateLabel.AutoSize = true;
-            EndDateLabel.Location = new Point(141, 15);
+            EndDateLabel.Location = new Point(118, 15);
             EndDateLabel.Name = "EndDateLabel";
             EndDateLabel.Size = new Size(44, 15);
             EndDateLabel.TabIndex = 7;
@@ -119,6 +119,8 @@
             // 
             // GroupingBox
             // 
+            GroupingBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            GroupingBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             GroupingBox.FormattingEnabled = true;
             GroupingBox.Items.AddRange(new object[] { "پوشاک", "خوراکی", "وسایل خانه", "تفریح", "حمل و نقل", "خرید روزانه", "بهداشت و سلامت", "اموزش و تحصیلات" });
             GroupingBox.Location = new Point(230, 76);
@@ -140,6 +142,8 @@
             // 
             // CardBox
             // 
+            CardBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            CardBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             CardBox.FormattingEnabled = true;
             CardBox.Location = new Point(12, 76);
             CardBox.Name = "CardBox";

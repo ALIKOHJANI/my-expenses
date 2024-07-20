@@ -37,6 +37,8 @@
             // 
             // ReportTypeBox
             // 
+            ReportTypeBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ReportTypeBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             ReportTypeBox.FormattingEnabled = true;
             ReportTypeBox.Items.AddRange(new object[] { "گزارش کلی", "گزارش ماهانه", "گزارش بازه دلخواه" });
             ReportTypeBox.Location = new Point(46, 67);

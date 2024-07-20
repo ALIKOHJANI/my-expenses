@@ -32,8 +32,8 @@
             Cardslabel = new Label();
             CardsListBox = new ListBox();
             Cardsbutton = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            ErrorLabel1 = new Label();
+            ErrorLabel2 = new Label();
             AddCardsButton = new Button();
             BackButton = new Button();
             SuspendLayout();
@@ -73,29 +73,29 @@
             Cardsbutton.UseVisualStyleBackColor = false;
             Cardsbutton.Click += Cardsbutton_Click;
             // 
-            // label1
+            // ErrorLabel1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("B Nazanin", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(166, 321);
-            label1.Name = "label1";
-            label1.Size = new Size(119, 28);
-            label1.TabIndex = 3;
-            label1.Text = "!کارت بانکی ندارید";
+            ErrorLabel1.AutoSize = true;
+            ErrorLabel1.BackColor = Color.Transparent;
+            ErrorLabel1.Font = new Font("B Nazanin", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ErrorLabel1.ForeColor = Color.DarkOrange;
+            ErrorLabel1.Location = new Point(166, 321);
+            ErrorLabel1.Name = "ErrorLabel1";
+            ErrorLabel1.Size = new Size(119, 28);
+            ErrorLabel1.TabIndex = 3;
+            ErrorLabel1.Text = "!کارت بانکی ندارید";
             // 
-            // label2
+            // ErrorLabel2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(119, 349);
-            label2.Name = "label2";
-            label2.Size = new Size(213, 23);
-            label2.TabIndex = 4;
-            label2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
+            ErrorLabel2.AutoSize = true;
+            ErrorLabel2.BackColor = Color.Transparent;
+            ErrorLabel2.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ErrorLabel2.ForeColor = Color.DarkOrange;
+            ErrorLabel2.Location = new Point(119, 349);
+            ErrorLabel2.Name = "ErrorLabel2";
+            ErrorLabel2.Size = new Size(213, 23);
+            ErrorLabel2.TabIndex = 4;
+            ErrorLabel2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
             // 
             // AddCardsButton
             // 
@@ -130,8 +130,8 @@
             ClientSize = new Size(427, 470);
             Controls.Add(BackButton);
             Controls.Add(AddCardsButton);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(ErrorLabel2);
+            Controls.Add(ErrorLabel1);
             Controls.Add(Cardsbutton);
             Controls.Add(CardsListBox);
             Controls.Add(Cardslabel);
@@ -147,8 +147,8 @@
         private Label Cardslabel;
         private ListBox CardsListBox;
         private Button Cardsbutton;
-        private Label label1;
-        private Label label2;
+        private Label ErrorLabel1;
+        private Label ErrorLabel2;
         private Button AddCardsButton;
         private Button BackButton;
     }

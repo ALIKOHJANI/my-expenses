@@ -41,6 +41,8 @@
             // 
             // bankComboBox
             // 
+            bankComboBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            bankComboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             bankComboBox.FormattingEnabled = true;
             bankComboBox.Items.AddRange(new object[] { "ملی", "ملت", "سپه", "تجارت", "پارسیان", "پاسارگاد", "سامان", "سینا", "اینده", "اقتصاد نوین", "رفاه", "رسالت", "مهر اقتصاد", "صادرات", "شهر", "ارمان", "قوامین", "ایران زمین", "کشاورزی", "کوثر", "نور", "توسعه و تعاون", "تات", "پست بانک", "مهر ایران", "مرکزی", "خاورمیانه", "کارافرین", "حکمت ایرنیان", "گردشگری", "دی", "انصار", "مسکن", "بلو بانک", "سرمایه" });
             bankComboBox.Location = new Point(12, 84);
@@ -63,6 +65,7 @@
             // 
             // CardNumberBox
             // 
+            CardNumberBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CardNumberBox.Location = new Point(12, 193);
             CardNumberBox.Name = "CardNumberBox";
             CardNumberBox.Size = new Size(256, 23);

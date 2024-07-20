@@ -69,7 +69,7 @@
             GroupingBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             GroupingBox.FormattingEnabled = true;
             GroupingBox.Items.AddRange(new object[] { "پوشاک", "خوراکی", "وسایل خانه", "تفریح", "حمل و نقل", "خرید روزانه", "بهداشت و سلامت", "اموزش و تحصیلات" });
-            GroupingBox.Location = new Point(194, 149);
+            GroupingBox.Location = new Point(194, 153);
             GroupingBox.Name = "GroupingBox";
             GroupingBox.RightToLeft = RightToLeft.Yes;
             GroupingBox.Size = new Size(229, 31);
