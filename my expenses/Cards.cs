@@ -20,8 +20,9 @@ namespace my_expenses
         private void BackButton_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
-
+            mainPage.Show();
             this.Close();
+
         }
 
         private void Cardsbutton_Click(object sender, EventArgs e)
@@ -32,17 +33,17 @@ namespace my_expenses
         }
 
         private void Cards_Load(object sender, EventArgs e)
-            {
+        {
             bool isValid = true;
 
             foreach (var item in Data.Addcards)
             {
-                CardsListBox.Items.Add(item.cardNumber + ":شماره کارت");
-               isValid = false;
+                CardsListBox.Rows.Add(item.cardNumber ,item.bank,item.name);
+                isValid = false;
             }
             if (isValid)
             {
-               
+
                 ErrorLabel1.Text = "!کارت بانکی ندارید";
                 ErrorLabel2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
                 AddCardsButton.Enabled = true;
@@ -50,8 +51,8 @@ namespace my_expenses
             }
             else
             {
-                ErrorLabel1.Text="";
-                ErrorLabel2.Text="";
+                ErrorLabel1.Text = "";
+                ErrorLabel2.Text = "";
                 AddCardsButton.Enabled = false;
 
             }

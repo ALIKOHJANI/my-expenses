@@ -67,6 +67,7 @@
             // 
             CardNumberBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CardNumberBox.Location = new Point(12, 193);
+            CardNumberBox.MaxLength = 16;
             CardNumberBox.Name = "CardNumberBox";
             CardNumberBox.Size = new Size(256, 23);
             CardNumberBox.TabIndex = 2;

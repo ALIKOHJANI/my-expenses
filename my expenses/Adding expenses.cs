@@ -65,7 +65,7 @@ namespace my_expenses
             {
                 GroupingBox.Items.Add(item.Name);
             }
-            epenses.cards = CardNumberBox.Text;
+            
         }
 
         private void AmountBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -75,6 +75,11 @@ namespace my_expenses
             {
                 e.Handled = true;
             }
+        }
+
+        private void CardNumberBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            epenses.cards = CardNumberBox.Text;
         }
     }
 }

@@ -22,7 +22,7 @@
 
             LogIn logIn = new LogIn();
             logIn.Show();
-            this.Close();
+            this.Hide();
 
         }
 
@@ -35,7 +35,7 @@
             }
             foreach (var item in Data.expenses)
             {
-                ListOfExpenses.Items.Add(":مبلغ" + item.Amount + ":شماره کارت" + item.cards);
+             dataGridView1.Rows.Add(item.Amount,item.cards,item.Grouping,item.Date);
 
             }
 
@@ -50,8 +50,32 @@
 
         private void AddingExpensesButton_Click(object sender, EventArgs e)
         {
-            AddingExpenses addingExpenses = new AddingExpenses();
-            addingExpenses.Show();
+            AddcardClass addcardClass = new AddcardClass();
+            bool isValid = true;
+            if (Data.Addcards.Count == 0)
+            {
+                MessageBox.Show("کارتی ثبت نشده!لطفا کارت  اضافه کنید");
+            }
+            else
+            {
+
+                AddingExpenses addingExpenses = new AddingExpenses();
+                addingExpenses.Show();
+                this.Hide();
+            }
+                                                                                                                                                                                                                                 //foreach (Data.Addcards.Count=0)
+                                                                                                                                                                                                                                 //{
+                                                                                                                                                                                                                                 //    if (string.IsNullOrEmpty(item.cardNumber))
+                                                                                                                                                                                                                                 //    {
+                                                                                                                                                                                                                                 //      
+                                                                                                                                                                                                                                 //    }
+                                                                                                                                                                                                                                 //    else
+                                                                                                                                                                                                                                 //    {
+                                                                                                                                                                                                                                 //        MessageBox.Show("کارتی ثبت نشده!لطفا کارت  اضافه کنید");
+                                                                                                                                                                                                                                 //    }
+                                                                                                                                                                                                                                 //}
+
+                                                                                                                                                                                                                                 ;
 
         }
 
@@ -59,14 +83,14 @@
         {
             reporting reporting = new reporting();
             reporting.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void cardbutton_Click(object sender, EventArgs e)
         {
             Cards cards = new Cards();
             cards.Show();
-            this.Close();
+            this.Hide();
 
         }
 
@@ -74,7 +98,7 @@
         {
             Grouping grouping = new Grouping();
             grouping.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void ListOfExpenses_SelectedIndexChanged(object sender, EventArgs e)

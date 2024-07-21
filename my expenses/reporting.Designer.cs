@@ -43,6 +43,7 @@
             ReportTypeBox.Items.AddRange(new object[] { "گزارش کلی", "گزارش ماهانه", "گزارش بازه دلخواه" });
             ReportTypeBox.Location = new Point(46, 67);
             ReportTypeBox.Name = "ReportTypeBox";
+            ReportTypeBox.RightToLeft = RightToLeft.Yes;
             ReportTypeBox.Size = new Size(222, 23);
             ReportTypeBox.TabIndex = 0;
             // 

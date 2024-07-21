@@ -30,12 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cards));
             Cardslabel = new Label();
-            CardsListBox = new ListBox();
             Cardsbutton = new Button();
             ErrorLabel1 = new Label();
             ErrorLabel2 = new Label();
             AddCardsButton = new Button();
             BackButton = new Button();
+            CardsListBox = new DataGridView();
+            CardNumber = new DataGridViewTextBoxColumn();
+            Bank = new DataGridViewTextBoxColumn();
+            CardName = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)CardsListBox).BeginInit();
             SuspendLayout();
             // 
             // Cardslabel
@@ -49,17 +53,6 @@
             Cardslabel.Size = new Size(99, 20);
             Cardslabel.TabIndex = 0;
             Cardslabel.Text = "کارت های شما";
-            // 
-            // CardsListBox
-            // 
-            CardsListBox.FormattingEnabled = true;
-            CardsListBox.ItemHeight = 15;
-            CardsListBox.Location = new Point(104, 74);
-            CardsListBox.Name = "CardsListBox";
-            CardsListBox.RightToLeft = RightToLeft.Yes;
-            CardsListBox.Size = new Size(248, 244);
-            CardsListBox.TabIndex = 1;
-            CardsListBox.SelectedIndexChanged += CardsListBox_SelectedIndexChanged;
             // 
             // Cardsbutton
             // 
@@ -120,6 +113,35 @@
             BackButton.UseVisualStyleBackColor = true;
             BackButton.Click += BackButton_Click;
             // 
+            // CardsListBox
+            // 
+            CardsListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CardsListBox.Columns.AddRange(new DataGridViewColumn[] { CardNumber, Bank, CardName });
+            CardsListBox.Location = new Point(47, 106);
+            CardsListBox.Name = "CardsListBox";
+            CardsListBox.RightToLeft = RightToLeft.Yes;
+            CardsListBox.RowTemplate.Height = 25;
+            CardsListBox.Size = new Size(343, 150);
+            CardsListBox.TabIndex = 7;
+            // 
+            // CardNumber
+            // 
+            CardNumber.HeaderText = "شماره کارت";
+            CardNumber.Name = "CardNumber";
+            CardNumber.ReadOnly = true;
+            // 
+            // Bank
+            // 
+            Bank.HeaderText = "بانک";
+            Bank.Name = "Bank";
+            Bank.ReadOnly = true;
+            // 
+            // CardName
+            // 
+            CardName.HeaderText = "نام کارت";
+            CardName.Name = "CardName";
+            CardName.ReadOnly = true;
+            // 
             // Cards
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -128,16 +150,17 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(427, 470);
+            Controls.Add(CardsListBox);
             Controls.Add(BackButton);
             Controls.Add(AddCardsButton);
             Controls.Add(ErrorLabel2);
             Controls.Add(ErrorLabel1);
             Controls.Add(Cardsbutton);
-            Controls.Add(CardsListBox);
             Controls.Add(Cardslabel);
             Name = "Cards";
             Text = "کارت های شما";
             Load += Cards_Load;
+            ((System.ComponentModel.ISupportInitialize)CardsListBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -145,11 +168,14 @@
         #endregion
 
         private Label Cardslabel;
-        private ListBox CardsListBox;
         private Button Cardsbutton;
         private Label ErrorLabel1;
         private Label ErrorLabel2;
         private Button AddCardsButton;
         private Button BackButton;
+        private DataGridView CardsListBox;
+        private DataGridViewTextBoxColumn CardNumber;
+        private DataGridViewTextBoxColumn Bank;
+        private DataGridViewTextBoxColumn CardName;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Windows.Forms;
 
 namespace my_expenses
 {
@@ -35,7 +36,7 @@ namespace my_expenses
             {
                 if (item.Date >= StartDateTimeSplit && item.Date <= EndDateTimeSplit)
                 {
-                    listSpecificTime.Items.Add(":مبلغ" + item.Amount + ":شماره کارت" + item.cards);
+                    listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, item.Date);
                     int sum = Data.expenses.Sum(c => c.Amount);
                     SumOfExpensesLabel.Text = sum.ToString();
                     SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";

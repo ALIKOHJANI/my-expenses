@@ -50,6 +50,7 @@
             // SendSMSBox
             // 
             SendSMSBox.Location = new Point(12, 46);
+            SendSMSBox.MaxLength = 10;
             SendSMSBox.Name = "SendSMSBox";
             SendSMSBox.Size = new Size(131, 23);
             SendSMSBox.TabIndex = 1;
