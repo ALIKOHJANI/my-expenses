@@ -30,7 +30,6 @@
         {
             SumOfExpensesLabel = new Label();
             SumOfExpensesTEXT = new Label();
-            listSpecificTime = new ListBox();
             StartDateTextBox = new MaskedTextBox();
             StartDate = new Label();
             EndDateTextBox = new MaskedTextBox();
@@ -41,11 +40,17 @@
             CardBox = new ComboBox();
             reportingButton = new Button();
             BackButton = new Button();
+            listMonthlyReport = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)listMonthlyReport).BeginInit();
             SuspendLayout();
             // 
             // SumOfExpensesLabel
             // 
-            SumOfExpensesLabel.Location = new Point(12, 154);
+            SumOfExpensesLabel.Location = new Point(51, 154);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
             SumOfExpensesLabel.Size = new Size(369, 15);
             SumOfExpensesLabel.TabIndex = 1;
@@ -54,25 +59,16 @@
             // 
             // SumOfExpensesTEXT
             // 
-            SumOfExpensesTEXT.Location = new Point(12, 187);
+            SumOfExpensesTEXT.Location = new Point(51, 188);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
             SumOfExpensesTEXT.Size = new Size(369, 15);
             SumOfExpensesTEXT.TabIndex = 2;
             SumOfExpensesTEXT.Text = "صفر تومان";
             SumOfExpensesTEXT.TextAlign = ContentAlignment.TopCenter;
             // 
-            // listSpecificTime
-            // 
-            listSpecificTime.FormattingEnabled = true;
-            listSpecificTime.ItemHeight = 15;
-            listSpecificTime.Location = new Point(12, 216);
-            listSpecificTime.Name = "listSpecificTime";
-            listSpecificTime.Size = new Size(369, 199);
-            listSpecificTime.TabIndex = 3;
-            // 
             // StartDateTextBox
             // 
-            StartDateTextBox.Location = new Point(230, 12);
+            StartDateTextBox.Location = new Point(269, 12);
             StartDateTextBox.Mask = "0000/00/00";
             StartDateTextBox.Name = "StartDateTextBox";
             StartDateTextBox.Size = new Size(100, 23);
@@ -82,7 +78,7 @@
             // StartDate
             // 
             StartDate.AutoSize = true;
-            StartDate.Location = new Point(336, 15);
+            StartDate.Location = new Point(375, 15);
             StartDate.Name = "StartDate";
             StartDate.Size = new Size(45, 15);
             StartDate.TabIndex = 5;
@@ -90,7 +86,7 @@
             // 
             // EndDateTextBox
             // 
-            EndDateTextBox.Location = new Point(12, 12);
+            EndDateTextBox.Location = new Point(51, 12);
             EndDateTextBox.Mask = "0000/00/00";
             EndDateTextBox.Name = "EndDateTextBox";
             EndDateTextBox.Size = new Size(100, 23);
@@ -100,7 +96,7 @@
             // EndDateLabel
             // 
             EndDateLabel.AutoSize = true;
-            EndDateLabel.Location = new Point(118, 15);
+            EndDateLabel.Location = new Point(157, 15);
             EndDateLabel.Name = "EndDateLabel";
             EndDateLabel.Size = new Size(44, 15);
             EndDateLabel.TabIndex = 7;
@@ -111,7 +107,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(318, 50);
+            label3.Location = new Point(357, 50);
             label3.Name = "label3";
             label3.Size = new Size(63, 23);
             label3.TabIndex = 9;
@@ -123,7 +119,7 @@
             GroupingBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             GroupingBox.FormattingEnabled = true;
             GroupingBox.Items.AddRange(new object[] { "پوشاک", "خوراکی", "وسایل خانه", "تفریح", "حمل و نقل", "خرید روزانه", "بهداشت و سلامت", "اموزش و تحصیلات" });
-            GroupingBox.Location = new Point(230, 76);
+            GroupingBox.Location = new Point(269, 76);
             GroupingBox.Name = "GroupingBox";
             GroupingBox.RightToLeft = RightToLeft.Yes;
             GroupingBox.Size = new Size(151, 23);
@@ -134,7 +130,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(68, 50);
+            label4.Location = new Point(107, 50);
             label4.Name = "label4";
             label4.Size = new Size(82, 23);
             label4.TabIndex = 11;
@@ -145,14 +141,14 @@
             CardBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             CardBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             CardBox.FormattingEnabled = true;
-            CardBox.Location = new Point(12, 76);
+            CardBox.Location = new Point(51, 76);
             CardBox.Name = "CardBox";
             CardBox.Size = new Size(138, 23);
             CardBox.TabIndex = 10;
             // 
             // reportingButton
             // 
-            reportingButton.Location = new Point(132, 115);
+            reportingButton.Location = new Point(171, 115);
             reportingButton.Name = "reportingButton";
             reportingButton.Size = new Size(116, 36);
             reportingButton.TabIndex = 12;
@@ -170,11 +166,48 @@
             BackButton.UseVisualStyleBackColor = true;
             BackButton.Click += BackButton_Click;
             // 
+            // listMonthlyReport
+            // 
+            listMonthlyReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            listMonthlyReport.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
+            listMonthlyReport.Location = new Point(12, 246);
+            listMonthlyReport.Name = "listMonthlyReport";
+            listMonthlyReport.ReadOnly = true;
+            listMonthlyReport.RightToLeft = RightToLeft.Yes;
+            listMonthlyReport.RowTemplate.Height = 25;
+            listMonthlyReport.Size = new Size(443, 169);
+            listMonthlyReport.TabIndex = 22;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "مبلغ";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "کارت";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "دسته بندی";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "تاریخ";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
             // SpecificTimeReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(393, 454);
+            ClientSize = new Size(475, 454);
+            Controls.Add(listMonthlyReport);
             Controls.Add(BackButton);
             Controls.Add(reportingButton);
             Controls.Add(label4);
@@ -185,12 +218,12 @@
             Controls.Add(EndDateTextBox);
             Controls.Add(StartDate);
             Controls.Add(StartDateTextBox);
-            Controls.Add(listSpecificTime);
             Controls.Add(SumOfExpensesTEXT);
             Controls.Add(SumOfExpensesLabel);
             Name = "SpecificTimeReport";
             Text = "گزارش بازه مشخص";
             Load += SpecificTimeReport_Load;
+            ((System.ComponentModel.ISupportInitialize)listMonthlyReport).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,7 +231,6 @@
         #endregion
         private Label SumOfExpensesLabel;
         private Label SumOfExpensesTEXT;
-        private ListBox listSpecificTime;
         private MaskedTextBox StartDateTextBox;
         private Label StartDate;
         private MaskedTextBox EndDateTextBox;
@@ -209,5 +241,10 @@
         private ComboBox CardBox;
         private Button reportingButton;
         private Button BackButton;
+        private DataGridView listMonthlyReport;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

@@ -45,6 +45,7 @@
             // 
             AmountBox.Location = new Point(194, 77);
             AmountBox.Margin = new Padding(4, 5, 4, 5);
+            AmountBox.MaxLength = 19;
             AmountBox.Name = "AmountBox";
             AmountBox.Size = new Size(229, 30);
             AmountBox.TabIndex = 0;
@@ -96,6 +97,7 @@
             CardNumberBox.Name = "CardNumberBox";
             CardNumberBox.Size = new Size(229, 31);
             CardNumberBox.TabIndex = 4;
+            CardNumberBox.SelectedIndexChanged += CardNumberBox_SelectedIndexChanged;
             // 
             // CardNumberlabel
             // 

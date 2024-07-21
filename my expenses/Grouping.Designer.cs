@@ -32,11 +32,12 @@
             GroupingBox = new ComboBox();
             label1 = new Label();
             label2 = new Label();
-            GroupingListBox = new ListBox();
             addbutton = new Button();
             ErrorLabel1 = new Label();
             ErrorLabel2 = new Label();
             Back = new Button();
+            GroupingListBox = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)GroupingListBox).BeginInit();
             SuspendLayout();
             // 
             // GroupingBox
@@ -73,16 +74,6 @@
             label2.Size = new Size(126, 26);
             label2.TabIndex = 2;
             label2.Text = "دسته بندی های شما";
-            // 
-            // GroupingListBox
-            // 
-            GroupingListBox.FormattingEnabled = true;
-            GroupingListBox.ItemHeight = 15;
-            GroupingListBox.Location = new Point(95, 187);
-            GroupingListBox.Name = "GroupingListBox";
-            GroupingListBox.RightToLeft = RightToLeft.Yes;
-            GroupingListBox.Size = new Size(206, 199);
-            GroupingListBox.TabIndex = 3;
             // 
             // addbutton
             // 
@@ -128,6 +119,15 @@
             Back.UseVisualStyleBackColor = true;
             Back.Click += Back_Click;
             // 
+            // GroupingListBox
+            // 
+            GroupingListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            GroupingListBox.Location = new Point(12, 190);
+            GroupingListBox.Name = "GroupingListBox";
+            GroupingListBox.RowTemplate.Height = 25;
+            GroupingListBox.Size = new Size(342, 171);
+            GroupingListBox.TabIndex = 8;
+            // 
             // Grouping
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -135,11 +135,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(366, 470);
+            Controls.Add(GroupingListBox);
             Controls.Add(Back);
             Controls.Add(ErrorLabel2);
             Controls.Add(ErrorLabel1);
             Controls.Add(addbutton);
-            Controls.Add(GroupingListBox);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(GroupingBox);
@@ -147,6 +147,7 @@
             Name = "Grouping";
             Text = "دسته بندی ها";
             Load += Grouping_Load;
+            ((System.ComponentModel.ISupportInitialize)GroupingListBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,10 +157,10 @@
         private ComboBox GroupingBox;
         private Label label1;
         private Label label2;
-        private ListBox GroupingListBox;
         private Button addbutton;
         private Label ErrorLabel1;
         private Label ErrorLabel2;
         private Button Back;
+        private DataGridView GroupingListBox;
     }
 }

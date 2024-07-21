@@ -37,12 +37,17 @@
             SumOfExpensesTEXT = new Label();
             AddingExpensesButton = new Button();
             label1 = new Label();
-            ListOfExpenses = new ListBox();
             reportingbutton = new Button();
             cardbutton = new Button();
             GroupingB = new Button();
             Homebutton = new Button();
+            dataGridView1 = new DataGridView();
+            Expenses = new DataGridViewTextBoxColumn();
+            card = new DataGridViewTextBoxColumn();
+            Grouping = new DataGridViewTextBoxColumn();
+            Date = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // ExpenseLabel
@@ -103,10 +108,10 @@
             SumOfExpensesTEXT.Anchor = AnchorStyles.None;
             SumOfExpensesTEXT.BackColor = Color.Transparent;
             SumOfExpensesTEXT.Font = new Font("Zilla Slab", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            SumOfExpensesTEXT.Location = new Point(114, 118);
+            SumOfExpensesTEXT.Location = new Point(61, 118);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
             SumOfExpensesTEXT.RightToLeft = RightToLeft.Yes;
-            SumOfExpensesTEXT.Size = new Size(418, 29);
+            SumOfExpensesTEXT.Size = new Size(442, 29);
             SumOfExpensesTEXT.TabIndex = 10;
             SumOfExpensesTEXT.Text = "صفر تومان";
             SumOfExpensesTEXT.TextAlign = ContentAlignment.MiddleCenter;
@@ -131,17 +136,6 @@
             label1.Size = new Size(84, 24);
             label1.TabIndex = 7;
             label1.Text = "خرج های اخیر";
-            // 
-            // ListOfExpenses
-            // 
-            ListOfExpenses.FormattingEnabled = true;
-            ListOfExpenses.ItemHeight = 15;
-            ListOfExpenses.Location = new Point(114, 219);
-            ListOfExpenses.Name = "ListOfExpenses";
-            ListOfExpenses.RightToLeft = RightToLeft.Yes;
-            ListOfExpenses.Size = new Size(389, 169);
-            ListOfExpenses.TabIndex = 8;
-            ListOfExpenses.SelectedIndexChanged += ListOfExpenses_SelectedIndexChanged;
             // 
             // reportingbutton
             // 
@@ -182,6 +176,42 @@
             Homebutton.Text = "خانه";
             Homebutton.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Expenses, card, Grouping, Date });
+            dataGridView1.Location = new Point(61, 219);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RightToLeft = RightToLeft.Yes;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(442, 169);
+            dataGridView1.TabIndex = 13;
+            // 
+            // Expenses
+            // 
+            Expenses.HeaderText = "مبلغ";
+            Expenses.Name = "Expenses";
+            Expenses.ReadOnly = true;
+            // 
+            // card
+            // 
+            card.HeaderText = "کارت";
+            card.Name = "card";
+            card.ReadOnly = true;
+            // 
+            // Grouping
+            // 
+            Grouping.HeaderText = "دسته بندی";
+            Grouping.Name = "Grouping";
+            Grouping.ReadOnly = true;
+            // 
+            // Date
+            // 
+            Date.HeaderText = "تاریخ";
+            Date.Name = "Date";
+            Date.ReadOnly = true;
+            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -190,11 +220,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(596, 509);
+            Controls.Add(dataGridView1);
             Controls.Add(Homebutton);
             Controls.Add(GroupingB);
             Controls.Add(cardbutton);
             Controls.Add(reportingbutton);
-            Controls.Add(ListOfExpenses);
             Controls.Add(label1);
             Controls.Add(AddingExpensesButton);
             Controls.Add(SumOfExpensesTEXT);
@@ -211,6 +241,7 @@
             FormClosing += MainPage_FormClosing;
             Load += MainPage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -225,10 +256,14 @@
         private Label SumOfExpensesTEXT;
         private Button AddingExpensesButton;
         private Label label1;
-        private ListBox ListOfExpenses;
         private Button reportingbutton;
         private Button cardbutton;
         private Button GroupingB;
         private Button Homebutton;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Expenses;
+        private DataGridViewTextBoxColumn card;
+        private DataGridViewTextBoxColumn Grouping;
+        private DataGridViewTextBoxColumn Date;
     }
 }

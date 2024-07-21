@@ -238,6 +238,7 @@
             // NationalIdBox
             // 
             NationalIdBox.Location = new Point(38, 85);
+            NationalIdBox.MaxLength = 10;
             NationalIdBox.Name = "NationalIdBox";
             NationalIdBox.Size = new Size(123, 23);
             NationalIdBox.TabIndex = 2;

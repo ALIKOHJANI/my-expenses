@@ -38,16 +38,16 @@ namespace my_expenses
                             }
                         }
                     }
-                   foreach (User item in Data.Users) 
+                    foreach (User item in Data.Users)
                     {
-                        if (item.NationalId==NationalIdBox.Text) 
+                        if (item.NationalId == NationalIdBox.Text)
                         {
-                             isValid=false;
+                            isValid = false;
                             MessageBox.Show("کد ملی تکراری میباشد لطفا کد ملی را درست وارد کنید ");
                         }
                         else
                         {
-                           
+
                         }
                     }
 

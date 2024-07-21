@@ -22,7 +22,7 @@ namespace my_expenses
             SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
             foreach (var item in Data.expenses)
             {
-                listMonthlyReport.Items.Add(item.Amount + ":شماره کارت" + item.cards);
+                listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, item.Date);
 
             }
             foreach (var item in Data.Addcards)
