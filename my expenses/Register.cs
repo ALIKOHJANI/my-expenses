@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class Register : Form
     {

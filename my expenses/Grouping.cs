@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class Grouping : Form
     {

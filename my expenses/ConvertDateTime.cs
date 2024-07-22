@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MD.PersianDateTime.Core;
 
-namespace my_expenses
+namespace myExpenses
 {
     public static class ConvertDateTime
     {

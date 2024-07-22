@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace my_expenses
+namespace myExpenses
 {
-    public class AddGroupingClass
+    public class AddGroupingService
     {
         public string Name { get; set; }
         public string Description { get; set; }

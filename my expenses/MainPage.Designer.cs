@@ -1,4 +1,4 @@
-﻿namespace my_expenses
+﻿namespace myExpenses
 {
     partial class MainPage
     {
@@ -108,10 +108,10 @@
             SumOfExpensesTEXT.Anchor = AnchorStyles.None;
             SumOfExpensesTEXT.BackColor = Color.Transparent;
             SumOfExpensesTEXT.Font = new Font("Zilla Slab", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            SumOfExpensesTEXT.Location = new Point(61, 118);
+            SumOfExpensesTEXT.Location = new Point(12, 118);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
             SumOfExpensesTEXT.RightToLeft = RightToLeft.Yes;
-            SumOfExpensesTEXT.Size = new Size(442, 29);
+            SumOfExpensesTEXT.Size = new Size(572, 29);
             SumOfExpensesTEXT.TabIndex = 10;
             SumOfExpensesTEXT.Text = "صفر تومان";
             SumOfExpensesTEXT.TextAlign = ContentAlignment.MiddleCenter;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qLK+735szfi1QQTSnFx6gfHyxavB6J7ekUicLPZjDPbNQtKyJybk6dehgzCiNpUMDK5uxpWYp4D/Y6UjdIiw/Q==",
+  "dgSpecHash": "PmAamW5eszs4Bx5M2A4NgVeygf/tvoPU3At2FTmnP5hQ0xpYO8Vfa2Rz58vQG+Wg3QN4Hy18DnCBhW9S21FGHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\my expenses.csproj",
+  "projectFilePath": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\myExpenses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kohjani\\.nuget\\packages\\md.persiandatetime.core\\2.3.5\\md.persiandatetime.core.2.3.5.nupkg.sha512",
     "C:\\Users\\Kohjani\\.nuget\\packages\\md.persiandatetime.standard\\2.4.1\\md.persiandatetime.standard.2.4.1.nupkg.sha512",

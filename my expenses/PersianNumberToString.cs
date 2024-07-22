@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace my_expenses
+namespace myExpenses
 {
-    static class Persian_Number_To_String
+    static class PersianNumberToString
     {
         public static string GET_Number_To_PersianString(string TXT)
         {

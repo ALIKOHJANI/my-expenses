@@ -1,4 +1,4 @@
-﻿namespace my_expenses
+﻿namespace myExpenses
 {
     partial class Cards
     {
@@ -33,7 +33,6 @@
             Cardsbutton = new Button();
             ErrorLabel1 = new Label();
             ErrorLabel2 = new Label();
-            AddCardsButton = new Button();
             BackButton = new Button();
             CardsListBox = new DataGridView();
             CardNumber = new DataGridViewTextBoxColumn();
@@ -72,7 +71,7 @@
             ErrorLabel1.BackColor = Color.Transparent;
             ErrorLabel1.Font = new Font("B Nazanin", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             ErrorLabel1.ForeColor = Color.DarkOrange;
-            ErrorLabel1.Location = new Point(166, 321);
+            ErrorLabel1.Location = new Point(157, 280);
             ErrorLabel1.Name = "ErrorLabel1";
             ErrorLabel1.Size = new Size(119, 28);
             ErrorLabel1.TabIndex = 3;
@@ -84,24 +83,11 @@
             ErrorLabel2.BackColor = Color.Transparent;
             ErrorLabel2.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             ErrorLabel2.ForeColor = Color.DarkOrange;
-            ErrorLabel2.Location = new Point(119, 349);
+            ErrorLabel2.Location = new Point(110, 308);
             ErrorLabel2.Name = "ErrorLabel2";
             ErrorLabel2.Size = new Size(213, 23);
             ErrorLabel2.TabIndex = 4;
             ErrorLabel2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
-            // 
-            // AddCardsButton
-            // 
-            AddCardsButton.BackColor = SystemColors.MenuHighlight;
-            AddCardsButton.FlatStyle = FlatStyle.Popup;
-            AddCardsButton.Font = new Font("B Nazanin", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            AddCardsButton.Location = new Point(58, 387);
-            AddCardsButton.Name = "AddCardsButton";
-            AddCardsButton.Size = new Size(317, 44);
-            AddCardsButton.TabIndex = 5;
-            AddCardsButton.Text = "افزودن کارت بانکی";
-            AddCardsButton.UseVisualStyleBackColor = false;
-            AddCardsButton.Click += AddCardsButton_Click;
             // 
             // BackButton
             // 
@@ -149,10 +135,9 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(427, 470);
+            ClientSize = new Size(427, 364);
             Controls.Add(CardsListBox);
             Controls.Add(BackButton);
-            Controls.Add(AddCardsButton);
             Controls.Add(ErrorLabel2);
             Controls.Add(ErrorLabel1);
             Controls.Add(Cardsbutton);
@@ -171,7 +156,6 @@
         private Button Cardsbutton;
         private Label ErrorLabel1;
         private Label ErrorLabel2;
-        private Button AddCardsButton;
         private Button BackButton;
         private DataGridView CardsListBox;
         private DataGridViewTextBoxColumn CardNumber;

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class MonthlyReport : Form
     {
@@ -19,7 +19,7 @@ namespace my_expenses
 
         private void MonthlyReport_Load(object sender, EventArgs e)
         {
-            SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
+            SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
             foreach (var item in Data.expenses)
             {
                 listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, item.Date);

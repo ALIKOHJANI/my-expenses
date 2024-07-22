@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows.Forms;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class SpecificTimeReport : Form
     {
@@ -36,10 +36,13 @@ namespace my_expenses
             {
                 if (item.Date >= StartDateTimeSplit && item.Date <= EndDateTimeSplit)
                 {
-                    listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, item.Date);
+                    PersianCalendar DatePc = new PersianCalendar();
+                    DateTime dateTime = item.Date;
+                    string PersianDate = string.Format("{0}/{1}/{2}", DatePc.GetYear(dateTime), DatePc.GetMonth(dateTime), DatePc.GetDayOfMonth(dateTime));
+                    listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
                     int sum = Data.expenses.Sum(c => c.Amount);
                     SumOfExpensesLabel.Text = sum.ToString();
-                    SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
+                    SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
 
                 }
             }
