@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class Addcard : Form
     {
@@ -24,7 +24,7 @@ namespace my_expenses
             this.Close();
 
         }
-        AddcardClass addcardClass = new AddcardClass();
+        AddcardService addcardClass = new AddcardService();
         private void bankComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             addcardClass.bank = bankComboBox.Text;

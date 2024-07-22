@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class GeneralReport : Form
     {
@@ -23,14 +24,18 @@ namespace my_expenses
 
             foreach (var item in Data.expenses)
             {
-                listGeneralReport.Items.Add(item.Amount + ":شماره کارت" + item.cards);
+
+                PersianCalendar DatePc = new PersianCalendar();
+                DateTime dateTime = item.Date;
+                string PersianDate = string.Format("{0}/{1}/{2}", DatePc.GetYear(dateTime), DatePc.GetMonth(dateTime), DatePc.GetDayOfMonth(dateTime));
+                listGeneralReport.Rows.Add(item.Amount + ":شماره کارت" + item.cards);
 
             }
 
             int sum = Data.expenses.Sum(c => c.Amount);
             SumOfExpensesLabel.Text = sum.ToString();
 
-            SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
+            SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
         }
 
         private void BackButton_Click(object sender, EventArgs e)

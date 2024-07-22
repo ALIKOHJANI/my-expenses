@@ -1,4 +1,4 @@
-﻿namespace my_expenses
+﻿namespace myExpenses
 {
     partial class SpecificTimeReport
     {
@@ -158,7 +158,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(298, 421);
+            BackButton.Location = new Point(372, 421);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(83, 31);
             BackButton.TabIndex = 13;

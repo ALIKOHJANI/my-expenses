@@ -212,9 +212,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\my expenses.csproj",
-      "projectName": "my expenses",
-      "projectPath": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\my expenses.csproj",
+      "projectUniqueName": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\myExpenses.csproj",
+      "projectName": "myExpenses",
+      "projectPath": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\myExpenses.csproj",
       "packagesPath": "C:\\Users\\Kohjani\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Kohjani\\Desktop\\my expenses\\my expenses\\obj\\",
       "projectStyle": "PackageReference",

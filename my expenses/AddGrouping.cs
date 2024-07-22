@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class AddGrouping : Form
     {
@@ -23,7 +23,7 @@ namespace my_expenses
             grouping.Show();
             this.Close();
         }
-        AddGroupingClass AddGroupingClass = new AddGroupingClass();
+        AddGroupingService AddGroupingClass = new AddGroupingService();
         private void NameGroupingBox_TextChanged(object sender, EventArgs e)
         {
             AddGroupingClass.Name = NameGroupingBox.Text;

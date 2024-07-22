@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class Cards : Form
     {
@@ -38,7 +38,7 @@ namespace my_expenses
 
             foreach (var item in Data.Addcards)
             {
-                CardsListBox.Rows.Add(item.cardNumber ,item.bank,item.name);
+                CardsListBox.Rows.Add(item.cardNumber, item.bank, item.name);
                 isValid = false;
             }
             if (isValid)
@@ -46,14 +46,14 @@ namespace my_expenses
 
                 ErrorLabel1.Text = "!کارت بانکی ندارید";
                 ErrorLabel2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
-                AddCardsButton.Enabled = true;
+
 
             }
             else
             {
                 ErrorLabel1.Text = "";
                 ErrorLabel2.Text = "";
-                AddCardsButton.Enabled = false;
+
 
             }
         }
@@ -63,11 +63,6 @@ namespace my_expenses
 
         }
 
-        private void AddCardsButton_Click(object sender, EventArgs e)
-        {
-            Addcard addcard = new Addcard();
-            addcard.Show();
-            this.Close();
-        }
+
     }
 }

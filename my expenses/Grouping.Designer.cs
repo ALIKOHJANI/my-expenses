@@ -1,4 +1,4 @@
-﻿namespace my_expenses
+﻿namespace myExpenses
 {
     partial class Grouping
     {
@@ -37,6 +37,7 @@
             ErrorLabel2 = new Label();
             Back = new Button();
             GroupingListBox = new DataGridView();
+            name = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)GroupingListBox).BeginInit();
             SuspendLayout();
             // 
@@ -122,11 +123,17 @@
             // GroupingListBox
             // 
             GroupingListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            GroupingListBox.Location = new Point(12, 190);
+            GroupingListBox.Columns.AddRange(new DataGridViewColumn[] { name });
+            GroupingListBox.Location = new Point(128, 187);
             GroupingListBox.Name = "GroupingListBox";
             GroupingListBox.RowTemplate.Height = 25;
-            GroupingListBox.Size = new Size(342, 171);
+            GroupingListBox.Size = new Size(146, 171);
             GroupingListBox.TabIndex = 8;
+            // 
+            // Name
+            // 
+            name.HeaderText = "نام دسته بندی";
+            name.Name = "name";
             // 
             // Grouping
             // 
@@ -162,5 +169,7 @@
         private Label ErrorLabel2;
         private Button Back;
         private DataGridView GroupingListBox;
+        private DataGridViewTextBoxColumn name;
+        
     }
 }

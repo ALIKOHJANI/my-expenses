@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class AddingExpenses : Form
     {

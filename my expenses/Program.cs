@@ -1,4 +1,4 @@
-namespace my_expenses
+namespace myExpenses
 {
     internal static class Program
     {

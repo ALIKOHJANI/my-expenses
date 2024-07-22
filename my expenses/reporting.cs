@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace my_expenses
+namespace myExpenses
 {
     public partial class reporting : Form
     {

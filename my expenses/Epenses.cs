@@ -1,4 +1,4 @@
-﻿namespace my_expenses
+﻿namespace myExpenses
 {
     public class Epenses
     {

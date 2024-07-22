@@ -1,4 +1,6 @@
-﻿namespace my_expenses
+﻿using System.Globalization;
+
+namespace myExpenses
 {
     public partial class MainPage : Form
     {
@@ -35,13 +37,17 @@
             }
             foreach (var item in Data.expenses)
             {
-             dataGridView1.Rows.Add(item.Amount,item.cards,item.Grouping,item.Date);
+
+                PersianCalendar pc = new PersianCalendar();
+                DateTime dateTime = item.Date;
+                string PersianDate = string.Format("{0}/{1}/{2}", pc.GetYear(dateTime), pc.GetMonth(dateTime), pc.GetDayOfMonth(dateTime));
+                dataGridView1.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
 
             }
 
             int sum = Data.expenses.Sum(c => c.Amount);
             SumOfExpensesLabel.Text = sum.ToString();
-            SumOfExpensesTEXT.Text = Persian_Number_To_String.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + "" + "تومان";
+            SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + "" + "تومان";
 
 
         }
@@ -50,7 +56,8 @@
 
         private void AddingExpensesButton_Click(object sender, EventArgs e)
         {
-            AddcardClass addcardClass = new AddcardClass();
+           
+            AddcardService addcardClass = new AddcardService();
             bool isValid = true;
             if (Data.Addcards.Count == 0)
             {
@@ -63,20 +70,7 @@
                 addingExpenses.Show();
                 this.Hide();
             }
-                                                                                                                                                                                                                                 //foreach (Data.Addcards.Count=0)
-                                                                                                                                                                                                                                 //{
-                                                                                                                                                                                                                                 //    if (string.IsNullOrEmpty(item.cardNumber))
-                                                                                                                                                                                                                                 //    {
-                                                                                                                                                                                                                                 //      
-                                                                                                                                                                                                                                 //    }
-                                                                                                                                                                                                                                 //    else
-                                                                                                                                                                                                                                 //    {
-                                                                                                                                                                                                                                 //        MessageBox.Show("کارتی ثبت نشده!لطفا کارت  اضافه کنید");
-                                                                                                                                                                                                                                 //    }
-                                                                                                                                                                                                                                 //}
-
-                                                                                                                                                                                                                                 ;
-
+             
         }
 
         private void reportingbutton_Click(object sender, EventArgs e)

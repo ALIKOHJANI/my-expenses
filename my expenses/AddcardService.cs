@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace my_expenses
+namespace myExpenses
 {
-    public class AddcardClass
+    public class AddcardService
     {
         public string bank { get; set; }
         public string name { get; set; }

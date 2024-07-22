@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace my_expenses.Properties {
+namespace myExpenses.Properties {
     using System;
     
     
