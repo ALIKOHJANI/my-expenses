@@ -29,10 +29,13 @@ namespace myExpenses
         private void AmountBox_TextChanged(object sender, EventArgs e)
         {
             epenses.Amount = Convert.ToInt32(AmountBox.Text);
-
+            //if (AmountBox.Text == "" || AmountBox.Text == "0") return;
+            //decimal price;
+            //price = decimal.Parse(AmountBox.Text, System.Globalization.NumberStyles.Currency);
+            //AmountBox.Text = price.ToString("#,#");
+            //AmountBox.SelectionStart = AmountBox.Text.Length;
         }
-
-        private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
+         private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             epenses.Grouping = GroupingBox.Text;
             GroupingBox.SelectedIndex = GroupingBox.FindString(GroupingBox.Text);
@@ -70,11 +73,9 @@ namespace myExpenses
 
         private void AmountBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
-
-            {
+            if (!(e.KeyChar >= '0' && e.KeyChar <= '9'))
                 e.Handled = true;
-            }
+        
         }
 
         private void CardNumberBox_SelectedIndexChanged(object sender, EventArgs e)

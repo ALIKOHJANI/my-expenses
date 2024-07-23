@@ -28,7 +28,7 @@ namespace myExpenses
                 PersianCalendar DatePc = new PersianCalendar();
                 DateTime dateTime = item.Date;
                 string PersianDate = string.Format("{0}/{1}/{2}", DatePc.GetYear(dateTime), DatePc.GetMonth(dateTime), DatePc.GetDayOfMonth(dateTime));
-                listGeneralReport.Rows.Add(item.Amount + ":شماره کارت" + item.cards);
+                listGeneralReport.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
 
             }
 

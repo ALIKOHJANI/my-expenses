@@ -124,13 +124,13 @@
             // 
             GroupingListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GroupingListBox.Columns.AddRange(new DataGridViewColumn[] { name });
-            GroupingListBox.Location = new Point(128, 187);
+            GroupingListBox.Location = new Point(113, 205);
             GroupingListBox.Name = "GroupingListBox";
             GroupingListBox.RowTemplate.Height = 25;
             GroupingListBox.Size = new Size(146, 171);
             GroupingListBox.TabIndex = 8;
             // 
-            // Name
+            // name
             // 
             name.HeaderText = "نام دسته بندی";
             name.Name = "name";
@@ -170,6 +170,6 @@
         private Button Back;
         private DataGridView GroupingListBox;
         private DataGridViewTextBoxColumn name;
-        
+
     }
 }

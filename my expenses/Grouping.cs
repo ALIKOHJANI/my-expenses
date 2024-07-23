@@ -42,8 +42,8 @@ namespace myExpenses
             if (isValid)
             {
 
-                ErrorLabel1.Text = "!کارت بانکی ندارید";
-                ErrorLabel2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
+                ErrorLabel1.Text = "!دسته بندی  ندارید";
+                ErrorLabel2.Text = "میتوانید دسته  بندی  خود   را  اضافه کنید";
 
             }
             else

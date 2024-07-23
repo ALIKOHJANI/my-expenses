@@ -56,7 +56,7 @@ namespace myExpenses
 
         private void AddingExpensesButton_Click(object sender, EventArgs e)
         {
-           
+
             AddcardService addcardClass = new AddcardService();
             bool isValid = true;
             if (Data.Addcards.Count == 0)
@@ -70,7 +70,7 @@ namespace myExpenses
                 addingExpenses.Show();
                 this.Hide();
             }
-             
+
         }
 
         private void reportingbutton_Click(object sender, EventArgs e)
@@ -97,6 +97,13 @@ namespace myExpenses
 
         private void ListOfExpenses_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void SumOfExpensesLabel_TextChanged(object sender, EventArgs e)
+        {
+            //SumOfExpensesLabel.Text = Convert.ToInt32(SumOfExpensesLabel.Text.Replace(",", "")).ToString("n0");
+
 
         }
     }

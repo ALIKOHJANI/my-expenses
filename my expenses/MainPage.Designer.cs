@@ -102,6 +102,7 @@
             SumOfExpensesLabel.TabIndex = 4;
             SumOfExpensesLabel.Text = "0";
             SumOfExpensesLabel.TextAlign = ContentAlignment.TopCenter;
+            SumOfExpensesLabel.TextChanged += SumOfExpensesLabel_TextChanged;
             // 
             // SumOfExpensesTEXT
             // 
