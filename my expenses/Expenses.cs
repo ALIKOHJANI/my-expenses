@@ -1,6 +1,6 @@
 ﻿namespace myExpenses
 {
-    public class Epenses
+    public class Expenses
     {
         public int Amount { get; set; }
         public string cards { get; set; }
@@ -8,7 +8,7 @@
         public string Description { get; set; }
         public DateTime Date { get; set; }
 
-        public Epenses()
+        public Expenses()
         {
             Date=DateTime.Now;
         }

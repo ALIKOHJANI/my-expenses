@@ -63,6 +63,9 @@ namespace myExpenses
 
         }
 
+        private void Cards_FormClosed(object sender, FormClosedEventArgs e)
+        {
 
+        }
     }
 }

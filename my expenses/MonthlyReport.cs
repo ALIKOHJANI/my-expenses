@@ -42,6 +42,12 @@ namespace myExpenses
             reporting.Show();
             this.Close();
         }
+
+        private void MonthlyReport_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+
+        }
     }
 }
 

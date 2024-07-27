@@ -252,6 +252,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(381, 338);
+            ControlBox = false;
             Controls.Add(NationalIdBox);
             Controls.Add(PhoneNumberBox);
             Controls.Add(DateOfBirthBox);
@@ -275,6 +276,7 @@
             Name = "Register";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ثبت نام";
+            FormClosed += Register_FormClosed;
             Load += Register_Load;
             KeyPress += Register_KeyPress;
             ResumeLayout(false);

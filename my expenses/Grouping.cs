@@ -29,6 +29,7 @@ namespace myExpenses
         {
             AddGrouping addGrouping = new AddGrouping();
             addGrouping.Show();
+            this.Close();
         }
 
         private void Grouping_Load(object sender, EventArgs e)
@@ -36,14 +37,15 @@ namespace myExpenses
             bool isValid = true;
             foreach (var item in Data.addGroupings)
             {
+                isValid = false;
                 GroupingListBox.Rows.Add(item.Name);
                 GroupingBox.Items.Add(item.Name);
             }
             if (isValid)
             {
 
-                ErrorLabel1.Text = "!کارت بانکی ندارید";
-                ErrorLabel2.Text = "میتوانید کارت  بانکی  خود   را  اضافه کنید";
+                ErrorLabel1.Text = "!دسته بندی  ندارید";
+                ErrorLabel2.Text = "میتوانید دسته  بندی  خود   را  اضافه کنید";
 
             }
             else
@@ -59,6 +61,12 @@ namespace myExpenses
         private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             GroupingBox.SelectedIndex = GroupingBox.FindString(GroupingBox.Text);
+        }
+
+        private void Grouping_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+
         }
     }
 }

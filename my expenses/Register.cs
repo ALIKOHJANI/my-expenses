@@ -37,6 +37,21 @@ namespace myExpenses
                                 (Controls[i] as TextBox).BackColor = Color.Red;
                             }
                         }
+
+                    }
+                    MaskedTextBox maskedTextBox = (MaskedTextBox)control;
+                    string MaskedTextBox = maskedTextBox.Text;
+                    for (int i = 0; i < this.Controls.Count; i++)
+                    {
+                        if (Controls[i] is MaskedTextBox)
+                        {
+                            if (string.IsNullOrEmpty((Controls[i] as MaskedTextBox).Text))
+                            {
+                                isValid = false;
+                                (Controls[i] as TextBox).BackColor = Color.Red;
+                            }
+                        }
+
                     }
                     foreach (User item in Data.Users)
                     {
@@ -49,6 +64,20 @@ namespace myExpenses
                         {
 
                         }
+                    }
+                    string birthDateText = DateOfBirthBox.Text;
+                    DateTime birthDate;
+                    if (DateTime.TryParseExact(birthDateText, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out birthDate))
+                    {
+                        
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show("تاریخ تولد را درست وارد کنید");
+                        label1.Visible = false;
+
+
                     }
 
                 }
@@ -255,6 +284,11 @@ namespace myExpenses
             {
                 e.Handled = true;
             }
+        }
+
+        private void Register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace myExpenses
@@ -25,7 +26,7 @@ namespace myExpenses
 
         private void reportingButton_Click(object sender, EventArgs e)
         {
-
+            bool isValid = true;
             PersianCalendar pc = new PersianCalendar();
             var startDateTimeSplit = StartDateTextBox.Text.Split('/');
             var endDateTimeSplit = EndDateTextBox.Text.Split('/');
@@ -34,16 +35,33 @@ namespace myExpenses
             DateTime EndDateTimeSplit = new DateTime(Convert.ToInt32(endDateTimeSplit[0]), Convert.ToInt32(endDateTimeSplit[1]), Convert.ToInt32(endDateTimeSplit[2]), pc);
             foreach (var item in Data.expenses)
             {
-                if (item.Date >= StartDateTimeSplit && item.Date <= EndDateTimeSplit)
+                string StartDate = StartDateTextBox.Text;
+                DateTime birthDate;
+                if (DateTime.TryParseExact(StartDate, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out birthDate))
                 {
-                    PersianCalendar DatePc = new PersianCalendar();
-                    DateTime dateTime = item.Date;
-                    string PersianDate = string.Format("{0}/{1}/{2}", DatePc.GetYear(dateTime), DatePc.GetMonth(dateTime), DatePc.GetDayOfMonth(dateTime));
-                    listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
-                    int sum = Data.expenses.Sum(c => c.Amount);
-                    SumOfExpensesLabel.Text = sum.ToString();
-                    SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
 
+
+                }
+                else
+                {
+                    MessageBox.Show("تاریخ تولد را درست وارد کنید");
+                    Visible = false;
+
+
+                }
+
+                if (isValid)
+                {
+                    if (item.Date >= StartDateTimeSplit && item.Date <= EndDateTimeSplit)
+                    {
+                        PersianCalendar DatePc = new PersianCalendar();
+                        DateTime dateTime = item.Date;
+                        string PersianDate = string.Format("{0}/{1}/{2}", DatePc.GetYear(dateTime), DatePc.GetMonth(dateTime), DatePc.GetDayOfMonth(dateTime));
+                        listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
+                        Int64 sum = Data.expenses.Sum(c => c.Amount);
+                        SumOfExpensesLabel.Text = sum.ToString();
+                        SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
+                    }
                 }
             }
 
@@ -54,6 +72,20 @@ namespace myExpenses
             reporting reporting = new reporting();
             reporting.Show();
             this.Close();
+        }
+
+        private void SpecificTimeReport_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+
+        }
+
+        private void SpecificTimeReport_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -13,9 +13,8 @@ namespace myExpenses
 
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            LogIn logIn = new LogIn();
+          
 
-            logIn.Show();
 
         }
 
@@ -45,7 +44,7 @@ namespace myExpenses
 
             }
 
-            int sum = Data.expenses.Sum(c => c.Amount);
+            Int64 sum = Data.expenses.Sum(c => c.Amount);
             SumOfExpensesLabel.Text = sum.ToString();
             SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + "" + "تومان";
 
@@ -56,7 +55,7 @@ namespace myExpenses
 
         private void AddingExpensesButton_Click(object sender, EventArgs e)
         {
-           
+
             AddcardService addcardClass = new AddcardService();
             bool isValid = true;
             if (Data.Addcards.Count == 0)
@@ -70,7 +69,7 @@ namespace myExpenses
                 addingExpenses.Show();
                 this.Hide();
             }
-             
+
         }
 
         private void reportingbutton_Click(object sender, EventArgs e)
@@ -97,6 +96,13 @@ namespace myExpenses
 
         private void ListOfExpenses_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void SumOfExpensesLabel_TextChanged(object sender, EventArgs e)
+        {
+            //SumOfExpensesLabel.Text = Convert.ToInt32(SumOfExpensesLabel.Text.Replace(",", "")).ToString("n0");
+
 
         }
     }

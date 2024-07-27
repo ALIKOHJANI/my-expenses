@@ -102,6 +102,7 @@
             SumOfExpensesLabel.TabIndex = 4;
             SumOfExpensesLabel.Text = "0";
             SumOfExpensesLabel.TextAlign = ContentAlignment.TopCenter;
+            SumOfExpensesLabel.TextChanged += SumOfExpensesLabel_TextChanged;
             // 
             // SumOfExpensesTEXT
             // 
@@ -220,6 +221,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(596, 509);
+            ControlBox = false;
             Controls.Add(dataGridView1);
             Controls.Add(Homebutton);
             Controls.Add(GroupingB);

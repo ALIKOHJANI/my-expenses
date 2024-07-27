@@ -124,13 +124,13 @@
             // 
             GroupingListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             GroupingListBox.Columns.AddRange(new DataGridViewColumn[] { name });
-            GroupingListBox.Location = new Point(128, 187);
+            GroupingListBox.Location = new Point(113, 205);
             GroupingListBox.Name = "GroupingListBox";
             GroupingListBox.RowTemplate.Height = 25;
             GroupingListBox.Size = new Size(146, 171);
             GroupingListBox.TabIndex = 8;
             // 
-            // Name
+            // name
             // 
             name.HeaderText = "نام دسته بندی";
             name.Name = "name";
@@ -142,6 +142,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(366, 470);
+            ControlBox = false;
             Controls.Add(GroupingListBox);
             Controls.Add(Back);
             Controls.Add(ErrorLabel2);
@@ -152,7 +153,9 @@
             Controls.Add(GroupingBox);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "Grouping";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "دسته بندی ها";
+            FormClosed += Grouping_FormClosed;
             Load += Grouping_Load;
             ((System.ComponentModel.ISupportInitialize)GroupingListBox).EndInit();
             ResumeLayout(false);
@@ -170,6 +173,6 @@
         private Button Back;
         private DataGridView GroupingListBox;
         private DataGridViewTextBoxColumn name;
-        
+
     }
 }

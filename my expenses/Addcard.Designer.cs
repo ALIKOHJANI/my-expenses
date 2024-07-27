@@ -134,6 +134,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(282, 400);
+            ControlBox = false;
             Controls.Add(backButton);
             Controls.Add(Entrybutton);
             Controls.Add(label3);
@@ -143,7 +144,9 @@
             Controls.Add(label1);
             Controls.Add(bankComboBox);
             Name = "Addcard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "اضافه کردن کارت";
+            FormClosed += Addcard_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

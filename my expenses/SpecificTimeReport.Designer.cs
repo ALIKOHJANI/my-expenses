@@ -73,6 +73,7 @@
             StartDateTextBox.Name = "StartDateTextBox";
             StartDateTextBox.Size = new Size(100, 23);
             StartDateTextBox.TabIndex = 4;
+            StartDateTextBox.Text = "14030101";
             StartDateTextBox.ValidatingType = typeof(DateTime);
             // 
             // StartDate
@@ -91,6 +92,7 @@
             EndDateTextBox.Name = "EndDateTextBox";
             EndDateTextBox.Size = new Size(100, 23);
             EndDateTextBox.TabIndex = 6;
+            EndDateTextBox.Text = "14031229";
             EndDateTextBox.ValidatingType = typeof(DateTime);
             // 
             // EndDateLabel
@@ -158,9 +160,9 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(372, 421);
+            BackButton.Location = new Point(352, 409);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(83, 31);
+            BackButton.Size = new Size(111, 33);
             BackButton.TabIndex = 13;
             BackButton.Text = "بازگشت";
             BackButton.UseVisualStyleBackColor = true;
@@ -170,7 +172,7 @@
             // 
             listMonthlyReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             listMonthlyReport.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
-            listMonthlyReport.Location = new Point(12, 246);
+            listMonthlyReport.Location = new Point(20, 220);
             listMonthlyReport.Name = "listMonthlyReport";
             listMonthlyReport.ReadOnly = true;
             listMonthlyReport.RightToLeft = RightToLeft.Yes;
@@ -207,6 +209,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(475, 454);
+            ControlBox = false;
             Controls.Add(listMonthlyReport);
             Controls.Add(BackButton);
             Controls.Add(reportingButton);
@@ -221,8 +224,11 @@
             Controls.Add(SumOfExpensesTEXT);
             Controls.Add(SumOfExpensesLabel);
             Name = "SpecificTimeReport";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "گزارش بازه مشخص";
+            FormClosed += SpecificTimeReport_FormClosed;
             Load += SpecificTimeReport_Load;
+            KeyPress += SpecificTimeReport_KeyPress;
             ((System.ComponentModel.ISupportInitialize)listMonthlyReport).EndInit();
             ResumeLayout(false);
             PerformLayout();

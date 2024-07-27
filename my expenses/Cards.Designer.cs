@@ -136,6 +136,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(427, 364);
+            ControlBox = false;
             Controls.Add(CardsListBox);
             Controls.Add(BackButton);
             Controls.Add(ErrorLabel2);
@@ -143,7 +144,9 @@
             Controls.Add(Cardsbutton);
             Controls.Add(Cardslabel);
             Name = "Cards";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "کارت های شما";
+            FormClosed += Cards_FormClosed;
             Load += Cards_Load;
             ((System.ComponentModel.ISupportInitialize)CardsListBox).EndInit();
             ResumeLayout(false);

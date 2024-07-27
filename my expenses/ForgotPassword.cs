@@ -32,14 +32,14 @@ namespace myExpenses
                 try
                 {
 
-                    char[] chArray = this.NationalIdBox.Text.ToCharArray();
+                    char[] chArray = this.SendSMSBox.Text.ToCharArray();
                     int[] numArray = new int[chArray.Length];
                     for (int i = 0; i < chArray.Length; i++)
                     {
                         numArray[i] = (int)char.GetNumericValue(chArray[i]);
                     }
                     int num2 = numArray[9];
-                    switch (this.NationalIdBox.Text)
+                    switch (this.SendSMSBox.Text)
                     {
                         case "0000000000":
                         case "1111111111":
@@ -62,7 +62,7 @@ namespace myExpenses
                         {
 
                             NewPassword = expnsesServis.GenerateNewPassword();
-                            NationalIdBox.Text = NewPassword;
+                            Password.Text = NewPassword;
                             item.Password = NewPassword;
 
                         }
@@ -104,6 +104,11 @@ namespace myExpenses
 
         }
 
+        private void ForgotPassword_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+
+        }
     }
 }
 

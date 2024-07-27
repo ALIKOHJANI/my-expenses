@@ -113,6 +113,7 @@
             // 
             DescriptionBox.Location = new Point(194, 277);
             DescriptionBox.Name = "DescriptionBox";
+            DescriptionBox.RightToLeft = RightToLeft.Yes;
             DescriptionBox.Size = new Size(229, 96);
             DescriptionBox.TabIndex = 6;
             DescriptionBox.Text = "";
@@ -156,6 +157,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(435, 433);
+            ControlBox = false;
             Controls.Add(BackButton);
             Controls.Add(button1);
             Controls.Add(Descriptionlabel);
@@ -169,7 +171,9 @@
             Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4, 5, 4, 5);
             Name = "AddingExpenses";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "اضافه کردن خرج";
+            FormClosed += AddingExpenses_FormClosed;
             Load += AddingExpenses_Load;
             ResumeLayout(false);
             PerformLayout();

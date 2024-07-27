@@ -67,6 +67,12 @@ namespace myExpenses
                 e.Handled = true;
             }
         }
+
+        private void Addcard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+
+        }
     }
 }
 

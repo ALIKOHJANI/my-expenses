@@ -146,6 +146,7 @@
             Name = "LogIn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ورود";
+            FormClosing += LogIn_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
