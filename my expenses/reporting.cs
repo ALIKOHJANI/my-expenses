@@ -47,5 +47,10 @@ namespace myExpenses
             }
 
         }
+
+        private void reporting_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

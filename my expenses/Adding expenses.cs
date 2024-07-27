@@ -18,7 +18,10 @@ namespace myExpenses
         {
             InitializeComponent();
         }
-        Epenses epenses = new Epenses();
+        Expenses expenses = new Expenses();
+
+        public Expenses Expenses { get => expenses; set => expenses = value; }
+
         private void BackButton_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
@@ -28,29 +31,29 @@ namespace myExpenses
 
         private void AmountBox_TextChanged(object sender, EventArgs e)
         {
-            epenses.Amount = Convert.ToInt32(AmountBox.Text);
+            Expenses.Amount = (int)Convert.ToInt64(AmountBox.Text);
             //if (AmountBox.Text == "" || AmountBox.Text == "0") return;
             //decimal price;
             //price = decimal.Parse(AmountBox.Text, System.Globalization.NumberStyles.Currency);
             //AmountBox.Text = price.ToString("#,#");
             //AmountBox.SelectionStart = AmountBox.Text.Length;
-        }
-         private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
+        }   
+        private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            epenses.Grouping = GroupingBox.Text;
+            expenses.Grouping = GroupingBox.Text;
             GroupingBox.SelectedIndex = GroupingBox.FindString(GroupingBox.Text);
         }
 
         private void DescriptionBox_TextChanged(object sender, EventArgs e)
         {
-            epenses.Description = DescriptionBox.Text;
+            expenses.Description = DescriptionBox.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
 
-            Data.expenses.Add(epenses);
+            Data.expenses.Add(expenses);
 
             MainPage mainPage = new MainPage();
             mainPage.Show();
@@ -68,19 +71,27 @@ namespace myExpenses
             {
                 GroupingBox.Items.Add(item.Name);
             }
-            
+
         }
 
         private void AmountBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= '0' && e.KeyChar <= '9'))
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
                 e.Handled = true;
-        
+            }
+
         }
 
         private void CardNumberBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            epenses.cards = CardNumberBox.Text;
+            expenses.cards = CardNumberBox.Text;
+        }
+
+        private void AddingExpenses_FormClosed(object sender, FormClosedEventArgs e)
+        {
+          
+
         }
     }
 }

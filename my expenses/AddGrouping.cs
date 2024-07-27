@@ -67,6 +67,12 @@ namespace myExpenses
             }
 
         }
+
+        private void AddGrouping_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+
+        }
     }
 }
 

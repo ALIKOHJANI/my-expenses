@@ -41,9 +41,9 @@
             // 
             // SumOfExpensesLabel
             // 
-            SumOfExpensesLabel.Location = new Point(12, 46);
+            SumOfExpensesLabel.Location = new Point(23, 46);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
-            SumOfExpensesLabel.Size = new Size(364, 15);
+            SumOfExpensesLabel.Size = new Size(443, 19);
             SumOfExpensesLabel.TabIndex = 0;
             SumOfExpensesLabel.Text = "0تومان ";
             SumOfExpensesLabel.TextAlign = ContentAlignment.TopCenter;
@@ -52,10 +52,10 @@
             // 
             SumOfExpensesTEXT.FlatStyle = FlatStyle.Flat;
             SumOfExpensesTEXT.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            SumOfExpensesTEXT.Location = new Point(12, 76);
+            SumOfExpensesTEXT.Location = new Point(23, 76);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
             SumOfExpensesTEXT.RightToLeft = RightToLeft.Yes;
-            SumOfExpensesTEXT.Size = new Size(364, 16);
+            SumOfExpensesTEXT.Size = new Size(443, 20);
             SumOfExpensesTEXT.TabIndex = 1;
             SumOfExpensesTEXT.Text = "صفر تومان";
             SumOfExpensesTEXT.TextAlign = ContentAlignment.TopCenter;
@@ -111,12 +111,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(487, 290);
+            ControlBox = false;
             Controls.Add(listGeneralReport);
             Controls.Add(BackButton);
             Controls.Add(SumOfExpensesTEXT);
             Controls.Add(SumOfExpensesLabel);
             Name = "GeneralReport";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "گزارش کلی";
+            FormClosed += GeneralReport_FormClosed;
             Load += GeneralReport_Load;
             ((System.ComponentModel.ISupportInitialize)listGeneralReport).EndInit();
             ResumeLayout(false);

@@ -32,7 +32,7 @@ namespace myExpenses
 
             }
 
-            int sum = Data.expenses.Sum(c => c.Amount);
+            Int64 sum = Data.expenses.Sum(c => c.Amount);
             SumOfExpensesLabel.Text = sum.ToString();
 
             SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
@@ -43,6 +43,12 @@ namespace myExpenses
             reporting reporting = new reporting();
             reporting.Show();
             this.Close();
+        }
+
+        private void GeneralReport_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+
         }
     }
 }

@@ -45,7 +45,6 @@
             NameGroupingBox.RightToLeft = RightToLeft.Yes;
             NameGroupingBox.Size = new Size(280, 30);
             NameGroupingBox.TabIndex = 0;
-            NameGroupingBox.TextAlign = HorizontalAlignment.Right;
             NameGroupingBox.TextChanged += NameGroupingBox_TextChanged;
             NameGroupingBox.KeyPress += NameGroupingBox_KeyPress;
             // 
@@ -113,6 +112,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(339, 450);
+            ControlBox = false;
             Controls.Add(BackButton);
             Controls.Add(Enterbutton);
             Controls.Add(label2);
@@ -121,7 +121,9 @@
             Controls.Add(NameGroupingBox);
             MaximizeBox = false;
             Name = "AddGrouping";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ایجاد دسته‌ بندی جدید";
+            FormClosed += AddGrouping_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

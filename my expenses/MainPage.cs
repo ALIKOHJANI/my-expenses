@@ -13,9 +13,8 @@ namespace myExpenses
 
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            LogIn logIn = new LogIn();
+          
 
-            logIn.Show();
 
         }
 
@@ -45,7 +44,7 @@ namespace myExpenses
 
             }
 
-            int sum = Data.expenses.Sum(c => c.Amount);
+            Int64 sum = Data.expenses.Sum(c => c.Amount);
             SumOfExpensesLabel.Text = sum.ToString();
             SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + "" + "تومان";
 

@@ -87,13 +87,16 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(291, 236);
+            ControlBox = false;
             Controls.Add(Back);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(ReportTypeBox);
             MaximizeBox = false;
             Name = "reporting";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "گزارش گیری";
+            FormClosed += reporting_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

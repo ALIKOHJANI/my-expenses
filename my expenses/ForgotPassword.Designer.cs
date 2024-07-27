@@ -33,7 +33,7 @@
             SendSMSBox = new TextBox();
             SendSMSbutton = new Button();
             ComingBackButton = new Button();
-            NationalIdBox = new TextBox();
+            Password = new TextBox();
             SuspendLayout();
             // 
             // SendSMSLabel
@@ -78,13 +78,13 @@
             ComingBackButton.UseVisualStyleBackColor = true;
             ComingBackButton.Click += ComingBackButton_Click;
             // 
-            // NationalIdBox
+            // Password
             // 
-            NationalIdBox.Location = new Point(12, 145);
-            NationalIdBox.Name = "NationalIdBox";
-            NationalIdBox.ReadOnly = true;
-            NationalIdBox.Size = new Size(131, 23);
-            NationalIdBox.TabIndex = 5;
+            Password.Location = new Point(12, 145);
+            Password.Name = "Password";
+            Password.ReadOnly = true;
+            Password.Size = new Size(131, 23);
+            Password.TabIndex = 5;
             // 
             // ForgotPassword
             // 
@@ -93,7 +93,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(309, 180);
-            Controls.Add(NationalIdBox);
+            ControlBox = false;
+            Controls.Add(Password);
             Controls.Add(ComingBackButton);
             Controls.Add(SendSMSbutton);
             Controls.Add(SendSMSBox);
@@ -104,6 +105,7 @@
             Name = "ForgotPassword";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "فراموشی رمز";
+            FormClosed += ForgotPassword_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -114,6 +116,6 @@
         private TextBox SendSMSBox;
         private Button SendSMSbutton;
         private Button ComingBackButton;
-        private TextBox NationalIdBox;
+        private TextBox Password;
     }
 }

@@ -221,6 +221,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(596, 509);
+            ControlBox = false;
             Controls.Add(dataGridView1);
             Controls.Add(Homebutton);
             Controls.Add(GroupingB);

@@ -47,6 +47,8 @@
             // 
             // comboBox1
             // 
+            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { " فروردین", " اردیبهشت", " خرداد", " تیر", " مرداد", " شهریور", " مهر", " آبان", " آذر", " دی", " بهمن", " اسفند" });
             comboBox1.Location = new Point(197, 19);
@@ -130,7 +132,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(58, 19);
+            BackButton.Location = new Point(12, 14);
             BackButton.Name = "BackButton";
             BackButton.Size = new Size(83, 31);
             BackButton.TabIndex = 19;
@@ -179,6 +181,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(464, 466);
+            ControlBox = false;
             Controls.Add(listMonthlyReport);
             Controls.Add(BackButton);
             Controls.Add(SumOfExpensesTEXT);
@@ -190,7 +193,9 @@
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Name = "MonthlyReport";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "گزارش ماهانه";
+            FormClosed += MonthlyReport_FormClosed;
             Load += MonthlyReport_Load;
             ((System.ComponentModel.ISupportInitialize)listMonthlyReport).EndInit();
             ResumeLayout(false);

@@ -142,6 +142,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(366, 470);
+            ControlBox = false;
             Controls.Add(GroupingListBox);
             Controls.Add(Back);
             Controls.Add(ErrorLabel2);
@@ -152,7 +153,9 @@
             Controls.Add(GroupingBox);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "Grouping";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "دسته بندی ها";
+            FormClosed += Grouping_FormClosed;
             Load += Grouping_Load;
             ((System.ComponentModel.ISupportInitialize)GroupingListBox).EndInit();
             ResumeLayout(false);
