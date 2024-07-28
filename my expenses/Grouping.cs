@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_expenses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace myExpenses
@@ -60,7 +62,10 @@ namespace myExpenses
 
         private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             GroupingBox.SelectedIndex = GroupingBox.FindString(GroupingBox.Text);
+            EditCategories editCategories = new EditCategories(GroupingBox.Text);
+            editCategories.ShowDialog();
         }
 
         private void Grouping_FormClosed(object sender, FormClosedEventArgs e)
