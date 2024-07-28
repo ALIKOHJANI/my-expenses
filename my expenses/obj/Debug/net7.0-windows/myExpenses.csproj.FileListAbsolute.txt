@@ -39,3 +39,6 @@ C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\refint
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\myExpenses.pdb
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\myExpenses.genruntimeconfig.cache
 C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\ref\myExpenses.dll
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.CardEditing.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.EditCategories.resources
+C:\Users\Kohjani\Desktop\my expenses\my expenses\obj\Debug\net7.0-windows\my_expenses.EditExpenses.resources

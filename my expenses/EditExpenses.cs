@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myExpenses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace my_expenses
         public EditExpenses()
         {
             InitializeComponent();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
         }
     }
 }

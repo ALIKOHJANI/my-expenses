@@ -20,7 +20,7 @@ namespace myExpenses
         }
         Expenses expenses = new Expenses();
 
-        public Expenses Expenses { get => expenses; set => expenses = value; }
+       
 
         private void BackButton_Click(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace myExpenses
 
         private void AmountBox_TextChanged(object sender, EventArgs e)
         {
-            Expenses.Amount = (int)Convert.ToInt64(AmountBox.Text);
+            expenses.Amount = (int)Convert.ToInt64(AmountBox.Text);
             //if (AmountBox.Text == "" || AmountBox.Text == "0") return;
             //decimal price;
             //price = decimal.Parse(AmountBox.Text, System.Globalization.NumberStyles.Currency);

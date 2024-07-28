@@ -101,10 +101,12 @@
             // 
             // CardsListBox
             // 
+            CardsListBox.AllowUserToDeleteRows = false;
             CardsListBox.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CardsListBox.Columns.AddRange(new DataGridViewColumn[] { CardNumber, Bank, CardName });
             CardsListBox.Location = new Point(47, 106);
             CardsListBox.Name = "CardsListBox";
+            CardsListBox.ReadOnly = true;
             CardsListBox.RightToLeft = RightToLeft.Yes;
             CardsListBox.RowTemplate.Height = 25;
             CardsListBox.Size = new Size(343, 150);
