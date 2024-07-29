@@ -65,6 +65,7 @@
             // 
             Descriptionlabel.AutoSize = true;
             Descriptionlabel.BackColor = Color.Transparent;
+            Descriptionlabel.ForeColor = SystemColors.ButtonHighlight;
             Descriptionlabel.Location = new Point(221, 241);
             Descriptionlabel.Name = "Descriptionlabel";
             Descriptionlabel.Size = new Size(54, 15);

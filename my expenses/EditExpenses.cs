@@ -13,7 +13,7 @@ namespace my_expenses
 {
     public partial class EditExpenses : Form
     {
-        public EditExpenses()
+        public EditExpenses(string EditExpenses )
         {
             InitializeComponent();
         }

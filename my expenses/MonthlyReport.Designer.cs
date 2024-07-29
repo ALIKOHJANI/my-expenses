@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
+            ChooseTheMonth = new ComboBox();
             label1 = new Label();
             label4 = new Label();
             CardBox = new ComboBox();
@@ -42,20 +42,21 @@
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            reportingButton = new Button();
             ((System.ComponentModel.ISupportInitialize)listMonthlyReport).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // ChooseTheMonth
             // 
-            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { " فروردین", " اردیبهشت", " خرداد", " تیر", " مرداد", " شهریور", " مهر", " آبان", " آذر", " دی", " بهمن", " اسفند" });
-            comboBox1.Location = new Point(197, 19);
-            comboBox1.Name = "comboBox1";
-            comboBox1.RightToLeft = RightToLeft.Yes;
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 0;
+            ChooseTheMonth.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ChooseTheMonth.AutoCompleteSource = AutoCompleteSource.ListItems;
+            ChooseTheMonth.FormattingEnabled = true;
+            ChooseTheMonth.Items.AddRange(new object[] { " فروردین", " اردیبهشت", " خرداد", " تیر", " مرداد", " شهریور", " مهر", " آبان", " آذر", " دی", " بهمن", " اسفند" });
+            ChooseTheMonth.Location = new Point(197, 19);
+            ChooseTheMonth.Name = "ChooseTheMonth";
+            ChooseTheMonth.RightToLeft = RightToLeft.Yes;
+            ChooseTheMonth.Size = new Size(121, 23);
+            ChooseTheMonth.TabIndex = 0;
             // 
             // label1
             // 
@@ -114,7 +115,7 @@
             // 
             SumOfExpensesTEXT.FlatStyle = FlatStyle.Flat;
             SumOfExpensesTEXT.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            SumOfExpensesTEXT.Location = new Point(58, 151);
+            SumOfExpensesTEXT.Location = new Point(58, 206);
             SumOfExpensesTEXT.Name = "SumOfExpensesTEXT";
             SumOfExpensesTEXT.Size = new Size(343, 16);
             SumOfExpensesTEXT.TabIndex = 18;
@@ -123,7 +124,7 @@
             // 
             // SumOfExpensesLabel
             // 
-            SumOfExpensesLabel.Location = new Point(58, 136);
+            SumOfExpensesLabel.Location = new Point(58, 191);
             SumOfExpensesLabel.Name = "SumOfExpensesLabel";
             SumOfExpensesLabel.Size = new Size(343, 15);
             SumOfExpensesLabel.TabIndex = 17;
@@ -176,12 +177,23 @@
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // reportingButton
+            // 
+            reportingButton.Location = new Point(171, 121);
+            reportingButton.Name = "reportingButton";
+            reportingButton.Size = new Size(116, 36);
+            reportingButton.TabIndex = 24;
+            reportingButton.Text = "گزارشگیری";
+            reportingButton.UseVisualStyleBackColor = true;
+            reportingButton.Click += reportingButton_Click;
+            // 
             // MonthlyReport
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(464, 466);
             ControlBox = false;
+            Controls.Add(reportingButton);
             Controls.Add(listMonthlyReport);
             Controls.Add(BackButton);
             Controls.Add(SumOfExpensesTEXT);
@@ -191,7 +203,7 @@
             Controls.Add(label3);
             Controls.Add(GroupingBox);
             Controls.Add(label1);
-            Controls.Add(comboBox1);
+            Controls.Add(ChooseTheMonth);
             Name = "MonthlyReport";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "گزارش ماهانه";
@@ -204,7 +216,7 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox ChooseTheMonth;
         private Label label1;
         private Label label4;
         private ComboBox CardBox;
@@ -218,5 +230,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Button reportingButton;
     }
 }
