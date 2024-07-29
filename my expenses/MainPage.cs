@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using my_expenses;
+using System.Globalization;
 
 namespace myExpenses
 {
@@ -13,7 +14,7 @@ namespace myExpenses
 
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-          
+
 
 
         }
@@ -103,6 +104,12 @@ namespace myExpenses
         {
             //SumOfExpensesLabel.Text = Convert.ToInt32(SumOfExpensesLabel.Text.Replace(",", "")).ToString("n0");
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //EditExpenses editExpenses = new EditExpenses(); 
 
         }
     }
