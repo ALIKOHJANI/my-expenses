@@ -37,6 +37,7 @@
             CardNumberBox = new TextBox();
             label1 = new Label();
             bankComboBox = new ComboBox();
+            Delete = new Button();
             SuspendLayout();
             // 
             // backButton
@@ -121,6 +122,16 @@
             bankComboBox.Size = new Size(256, 23);
             bankComboBox.TabIndex = 8;
             // 
+            // Delete
+            // 
+            Delete.Location = new Point(204, 7);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(75, 23);
+            Delete.TabIndex = 16;
+            Delete.Text = "حذف";
+            Delete.UseVisualStyleBackColor = true;
+            Delete.Click += Delete_Click;
+            // 
             // CardEditing
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -128,6 +139,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(289, 379);
+            Controls.Add(Delete);
             Controls.Add(backButton);
             Controls.Add(Entrybutton);
             Controls.Add(label3);
@@ -147,10 +159,11 @@
         private Button backButton;
         private Button Entrybutton;
         private Label label3;
-        private TextBox CardNameBox;
+        public TextBox CardNameBox;
         private Label label2;
-        private TextBox CardNumberBox;
+        public TextBox CardNumberBox;
         private Label label1;
-        private ComboBox bankComboBox;
+        public ComboBox bankComboBox;
+        private Button Delete;
     }
 }

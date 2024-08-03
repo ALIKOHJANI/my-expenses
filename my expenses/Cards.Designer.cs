@@ -111,6 +111,7 @@
             CardsListBox.RowTemplate.Height = 25;
             CardsListBox.Size = new Size(343, 150);
             CardsListBox.TabIndex = 7;
+            CardsListBox.CellContentClick += CardsListBox_CellContentClick;
             // 
             // CardNumber
             // 

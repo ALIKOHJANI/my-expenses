@@ -1,4 +1,5 @@
-﻿using System;
+﻿using my_expenses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,6 +67,27 @@ namespace myExpenses
         private void Cards_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+        }
+
+        private void CardsListBox_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CardEditing cardEditing= new CardEditing();
+            if (CardsListBox.Rows.Count == 0)
+            {
+                MessageBox.Show("موردي براي ويرايش وجود ندارد", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            cardEditing.CardNumberBox.Text = CardsListBox["CardNumber", CardsListBox.CurrentRow.Index].Value.ToString();
+            cardEditing.CardNameBox.Text = CardsListBox["CardName", CardsListBox.CurrentRow.Index].Value.ToString();
+            cardEditing.bankComboBox.Text = CardsListBox["Bank", CardsListBox.CurrentRow.Index].Value.ToString();
+            if (cardEditing.ShowDialog() == DialogResult.OK)
+            {
+                 CardsListBox["CardNumber", CardsListBox.CurrentRow.Index].Value =cardEditing.CardNumberBox.Text ;
+                 CardsListBox["CardName", CardsListBox.CurrentRow.Index].Value= cardEditing.CardNameBox.Text;
+                 CardsListBox["Bank", CardsListBox.CurrentRow.Index].Value= cardEditing.bankComboBox.Text;
+
+                
+            }
         }
     }
 }

@@ -39,6 +39,7 @@
             GroupingBox = new ComboBox();
             label1 = new Label();
             AmountBox = new TextBox();
+            Delete = new Button();
             SuspendLayout();
             // 
             // BackButton
@@ -60,6 +61,7 @@
             button1.TabIndex = 18;
             button1.Text = "ایجاد خرج جدید";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Descriptionlabel
             // 
@@ -145,6 +147,16 @@
             AmountBox.Size = new Size(229, 23);
             AmountBox.TabIndex = 10;
             // 
+            // Delete
+            // 
+            Delete.Location = new Point(241, 16);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(75, 23);
+            Delete.TabIndex = 20;
+            Delete.Text = "حذف";
+            Delete.UseVisualStyleBackColor = true;
+            Delete.Click += Delete_Click;
+            // 
             // EditExpenses
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -152,6 +164,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(328, 425);
+            Controls.Add(Delete);
             Controls.Add(BackButton);
             Controls.Add(button1);
             Controls.Add(Descriptionlabel);
@@ -173,12 +186,13 @@
         private Button BackButton;
         private Button button1;
         private Label Descriptionlabel;
-        private RichTextBox DescriptionBox;
+        public RichTextBox DescriptionBox;
         private Label CardNumberlabel;
-        private ComboBox CardNumberBox;
+        public ComboBox CardNumberBox;
         private Label label2;
-        private ComboBox GroupingBox;
+        public ComboBox GroupingBox;
         private Label label1;
-        private TextBox AmountBox;
+        public TextBox AmountBox;
+        private Button Delete;
     }
 }

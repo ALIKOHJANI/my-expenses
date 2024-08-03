@@ -20,7 +20,7 @@ namespace myExpenses
 
         private void MonthlyReport_Load(object sender, EventArgs e)
         {
-            SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
+
             foreach (var item in Data.expenses)
             {
                 listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, item.Date);
@@ -49,7 +49,7 @@ namespace myExpenses
 
 
         }
-        
+
         private void reportingButton_Click(object sender, EventArgs e)
         {
             foreach (var item in Data.expenses)
@@ -59,7 +59,7 @@ namespace myExpenses
 
                 if (item.Date <= start && item.Date >= end)
                 {
-                    if (item.cards == CardBox.Text)
+                    if (item.cards == CardBox.Text || item.Grouping == GroupingBox.Text)
                     {
                         SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
                         PersianCalendar pc = new PersianCalendar();
@@ -69,21 +69,20 @@ namespace myExpenses
                     }
                     else
                     {
-                         
-                    }
-                    if (item.Grouping == GroupingBox.Text)
-                    {
                         SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
                         PersianCalendar pc = new PersianCalendar();
                         DateTime dateTime = item.Date;
                         string PersianDate = string.Format("{0}/{1}/{2}", pc.GetYear(dateTime), pc.GetMonth(dateTime), pc.GetDayOfMonth(dateTime));
                         listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
-                    }
-                    else
-                    {
+
                     }
                 }
             }
+        }
+
+        private void ChooseTheMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
