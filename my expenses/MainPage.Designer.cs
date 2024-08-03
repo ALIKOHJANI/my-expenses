@@ -41,13 +41,13 @@
             cardbutton = new Button();
             GroupingB = new Button();
             Homebutton = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridView = new DataGridView();
             Expenses = new DataGridViewTextBoxColumn();
             card = new DataGridViewTextBoxColumn();
             Grouping = new DataGridViewTextBoxColumn();
             Date = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // ExpenseLabel
@@ -177,18 +177,19 @@
             Homebutton.Text = "خانه";
             Homebutton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Expenses, card, Grouping, Date });
-            dataGridView1.Location = new Point(61, 219);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RightToLeft = RightToLeft.Yes;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(442, 169);
-            dataGridView1.TabIndex = 13;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { Expenses, card, Grouping, Date });
+            dataGridView.Location = new Point(61, 219);
+            dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
+            dataGridView.RightToLeft = RightToLeft.Yes;
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.Size = new Size(442, 169);
+            dataGridView.TabIndex = 13;
+            dataGridView.EditModeChanged += dataGridView_EditModeChanged;
+            dataGridView.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Expenses
             // 
@@ -223,7 +224,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(596, 509);
             ControlBox = false;
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView);
             Controls.Add(Homebutton);
             Controls.Add(GroupingB);
             Controls.Add(cardbutton);
@@ -244,7 +245,7 @@
             FormClosing += MainPage_FormClosing;
             Load += MainPage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,7 +264,7 @@
         private Button cardbutton;
         private Button GroupingB;
         private Button Homebutton;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView;
         private DataGridViewTextBoxColumn Expenses;
         private DataGridViewTextBoxColumn card;
         private DataGridViewTextBoxColumn Grouping;

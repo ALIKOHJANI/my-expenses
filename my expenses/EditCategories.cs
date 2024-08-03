@@ -33,8 +33,8 @@ namespace my_expenses
         {
             foreach (AddGroupingService Item in Data.addGroupings)
             {
-               Data.addGroupings.Add(groupingService);
-           
+                Data.addGroupings.Add(groupingService);
+
             }
 
 
@@ -52,14 +52,26 @@ namespace my_expenses
             }
         }
 
-        private void NameGroupingBox_TextChanged(object sender, EventArgs e)
+        public void NameGroupingBox_TextChanged(object sender, EventArgs e)
         {
             groupingService.Name = NameGroupingBox.Text;
         }
 
-        private void DescriptionBox_TextChanged(object sender, EventArgs e)
+        public void DescriptionBox_TextChanged(object sender, EventArgs e)
         {
-            groupingService.Description = DescriptionBox.Text; 
+            groupingService.Description = DescriptionBox.Text;
+        }
+
+        public void Delete_Click(object sender, EventArgs e)
+        {
+
+            foreach (var item in Data.addGroupings)
+            {
+                if (item.Name == NameGroupingBox.Text)
+                {
+                    Data.addGroupings.Remove(item);
+                }
+            }
         }
     }
 }

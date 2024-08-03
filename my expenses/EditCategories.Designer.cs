@@ -35,6 +35,7 @@
             DescriptionBox = new RichTextBox();
             label1 = new Label();
             NameGroupingBox = new TextBox();
+            Delete = new Button();
             SuspendLayout();
             // 
             // BackButton
@@ -103,6 +104,16 @@
             NameGroupingBox.TabIndex = 6;
             NameGroupingBox.TextChanged += NameGroupingBox_TextChanged;
             // 
+            // Delete
+            // 
+            Delete.Location = new Point(277, 10);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(75, 23);
+            Delete.TabIndex = 12;
+            Delete.Text = "حذف";
+            Delete.UseVisualStyleBackColor = true;
+            Delete.Click += Delete_Click;
+            // 
             // EditCategories
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -110,6 +121,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(356, 450);
+            Controls.Add(Delete);
             Controls.Add(BackButton);
             Controls.Add(Enterbutton);
             Controls.Add(label2);
@@ -131,5 +143,6 @@
         private RichTextBox DescriptionBox;
         private Label label1;
         private TextBox NameGroupingBox;
+        private Button Delete;
     }
 }

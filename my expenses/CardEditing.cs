@@ -13,16 +13,27 @@ namespace my_expenses
 {
     public partial class CardEditing : Form
     {
-        public CardEditing(string CardsListBox)
+        public CardEditing()
         {
             InitializeComponent();
         }
 
-        private void backButton_Click(object sender, EventArgs e)
+        public void backButton_Click(object sender, EventArgs e)
         {
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Close();
+        }
+
+        public void Delete_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Data.Addcards)
+            {
+                if (item.cardNumber == CardNumberBox.Text)
+                {
+                    Data.Addcards.Remove(item);
+                }
+            }
         }
     }
 }

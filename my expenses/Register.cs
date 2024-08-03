@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Windows.Forms;
 
 namespace myExpenses
 {
@@ -39,8 +40,7 @@ namespace myExpenses
                         }
 
                     }
-                    MaskedTextBox maskedTextBox = (MaskedTextBox)control;
-                    string MaskedTextBox = maskedTextBox.Text;
+
                     for (int i = 0; i < this.Controls.Count; i++)
                     {
                         if (Controls[i] is MaskedTextBox)
@@ -48,7 +48,7 @@ namespace myExpenses
                             if (string.IsNullOrEmpty((Controls[i] as MaskedTextBox).Text))
                             {
                                 isValid = false;
-                                (Controls[i] as TextBox).BackColor = Color.Red;
+                                (Controls[i] as MaskedTextBox ).BackColor = Color.Red;
                             }
                         }
 

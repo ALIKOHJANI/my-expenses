@@ -1,5 +1,6 @@
 ﻿using my_expenses;
 using System.Globalization;
+using System.Windows.Forms;
 
 namespace myExpenses
 {
@@ -41,7 +42,7 @@ namespace myExpenses
                 PersianCalendar pc = new PersianCalendar();
                 DateTime dateTime = item.Date;
                 string PersianDate = string.Format("{0}/{1}/{2}", pc.GetYear(dateTime), pc.GetMonth(dateTime), pc.GetDayOfMonth(dateTime));
-                dataGridView1.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
+                dataGridView.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
 
             }
 
@@ -102,14 +103,35 @@ namespace myExpenses
 
         private void SumOfExpensesLabel_TextChanged(object sender, EventArgs e)
         {
-            //SumOfExpensesLabel.Text = Convert.ToInt32(SumOfExpensesLabel.Text.Replace(",", "")).ToString("n0");
+
 
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //EditExpenses editExpenses = new EditExpenses(); 
+            EditExpenses editExpenses = new EditExpenses();
+            if (dataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("موردي براي ويرايش وجود ندارد", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            editExpenses.AmountBox.Text =dataGridView["Expenses", dataGridView.CurrentRow.Index].Value.ToString();
+            editExpenses.GroupingBox.Text = dataGridView["Grouping", dataGridView.CurrentRow.Index].Value.ToString();
+            editExpenses.CardNumberBox.Text = dataGridView["Card", dataGridView.CurrentRow.Index].Value.ToString();
+            
+            if (editExpenses.ShowDialog() == DialogResult.OK)
+            {
+                 dataGridView["AmountBox", dataGridView.CurrentRow.Index].Value= editExpenses. AmountBox.Text;
+                dataGridView["GroupingBox", dataGridView.CurrentRow.Index].Value =editExpenses.GroupingBox.Text;
+                dataGridView["CardNumberBox", dataGridView.CurrentRow.Index].Value = editExpenses.CardNumberBox.Text;
+               
+
+            }
+        }
+
+        private void dataGridView_EditModeChanged(object sender, EventArgs e)
+        {
 
         }
     }
