@@ -80,6 +80,7 @@ namespace myExpenses
             cardEditing.CardNumberBox.Text = CardsListBox["CardNumber", CardsListBox.CurrentRow.Index].Value.ToString();
             cardEditing.CardNameBox.Text = CardsListBox["CardName", CardsListBox.CurrentRow.Index].Value.ToString();
             cardEditing.bankComboBox.Text = CardsListBox["Bank", CardsListBox.CurrentRow.Index].Value.ToString();
+            this.Close();
             if (cardEditing.ShowDialog() == DialogResult.OK)
             {
                  CardsListBox["CardNumber", CardsListBox.CurrentRow.Index].Value =cardEditing.CardNumberBox.Text ;

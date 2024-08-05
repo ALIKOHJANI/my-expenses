@@ -54,7 +54,7 @@ namespace myExpenses
                 {
                     if (item.Date >= StartDateTimeSplit && item.Date <= EndDateTimeSplit)
                     {
-                        if (item.cards == CardBox.Text || item.Grouping == GroupingBox.Text)
+                        if (item.cards == CardBox.Text )
                         {
                             PersianCalendar DatePc = new PersianCalendar();
                             DateTime dateTime = item.Date;
@@ -64,7 +64,18 @@ namespace myExpenses
                             SumOfExpensesLabel.Text = sum.ToString();
                             SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
                         }
-                        else
+                        if(item.Grouping == GroupingBox.Text)
+                        {
+                            PersianCalendar DatePc = new PersianCalendar();
+                            DateTime dateTime = item.Date;
+                            string PersianDate = string.Format("{0}/{1}/{2}", DatePc.GetYear(dateTime), DatePc.GetMonth(dateTime), DatePc.GetDayOfMonth(dateTime));
+                            listMonthlyReport.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
+                            Int64 sum = Data.expenses.Sum(c => c.Amount);
+                            SumOfExpensesLabel.Text = sum.ToString();
+                            SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
+
+                        }
+                        if (GroupingBox.Text == null && CardBox.Text == null)
                         {
                             PersianCalendar DatePc = new PersianCalendar();
                             DateTime dateTime = item.Date;

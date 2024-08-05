@@ -44,6 +44,7 @@ namespace myExpenses
                 string PersianDate = string.Format("{0}/{1}/{2}", pc.GetYear(dateTime), pc.GetMonth(dateTime), pc.GetDayOfMonth(dateTime));
                 dataGridView.Rows.Add(item.Amount, item.cards, item.Grouping, PersianDate);
 
+
             }
 
             Int64 sum = Data.expenses.Sum(c => c.Amount);
@@ -116,16 +117,16 @@ namespace myExpenses
                 MessageBox.Show("موردي براي ويرايش وجود ندارد", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            editExpenses.AmountBox.Text =dataGridView["Expenses", dataGridView.CurrentRow.Index].Value.ToString();
+            editExpenses.AmountBox.Text = dataGridView["Expenses", dataGridView.CurrentRow.Index].Value.ToString();
             editExpenses.GroupingBox.Text = dataGridView["Grouping", dataGridView.CurrentRow.Index].Value.ToString();
             editExpenses.CardNumberBox.Text = dataGridView["Card", dataGridView.CurrentRow.Index].Value.ToString();
-            
+
             if (editExpenses.ShowDialog() == DialogResult.OK)
             {
-                 dataGridView["AmountBox", dataGridView.CurrentRow.Index].Value= editExpenses. AmountBox.Text;
-                dataGridView["GroupingBox", dataGridView.CurrentRow.Index].Value =editExpenses.GroupingBox.Text;
+                dataGridView["AmountBox", dataGridView.CurrentRow.Index].Value = editExpenses.AmountBox.Text;
+                dataGridView["GroupingBox", dataGridView.CurrentRow.Index].Value = editExpenses.GroupingBox.Text;
                 dataGridView["CardNumberBox", dataGridView.CurrentRow.Index].Value = editExpenses.CardNumberBox.Text;
-               
+
 
             }
         }
@@ -133,6 +134,10 @@ namespace myExpenses
         private void dataGridView_EditModeChanged(object sender, EventArgs e)
         {
 
+        }
+        private void dataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            
         }
     }
 }

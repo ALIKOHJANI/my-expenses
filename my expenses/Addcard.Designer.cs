@@ -51,6 +51,7 @@
             bankComboBox.Size = new Size(256, 23);
             bankComboBox.TabIndex = 0;
             bankComboBox.SelectedIndexChanged += bankComboBox_SelectedIndexChanged;
+            bankComboBox.KeyPress += bankComboBox_KeyPress;
             // 
             // label1
             // 
@@ -92,7 +93,6 @@
             CardNameBox.RightToLeft = RightToLeft.Yes;
             CardNameBox.Size = new Size(256, 23);
             CardNameBox.TabIndex = 4;
-            CardNameBox.TextAlign = HorizontalAlignment.Right;
             CardNameBox.TextChanged += CardNameBox_TextChanged;
             CardNameBox.KeyPress += CardNameBox_KeyPress;
             // 

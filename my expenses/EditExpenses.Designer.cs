@@ -140,7 +140,7 @@
             // 
             // AmountBox
             // 
-            AmountBox.Location = new Point(55, 67);
+            AmountBox.Location = new Point(55, 59);
             AmountBox.Margin = new Padding(4, 5, 4, 5);
             AmountBox.MaxLength = 19;
             AmountBox.Name = "AmountBox";

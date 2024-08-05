@@ -31,7 +31,7 @@ namespace myExpenses
 
         private void AmountBox_TextChanged(object sender, EventArgs e)
         {
-            expenses.Amount = (int)Convert.ToInt64(AmountBox.Text);
+          
             //if (AmountBox.Text == "" || AmountBox.Text == "0") return;
             //decimal price;
             //price = decimal.Parse(AmountBox.Text, System.Globalization.NumberStyles.Currency);
@@ -52,7 +52,7 @@ namespace myExpenses
         private void button1_Click(object sender, EventArgs e)
         {
 
-
+            expenses.Amount = (int)Convert.ToInt64(AmountBox.Text);
             Data.expenses.Add(expenses);
 
             MainPage mainPage = new MainPage();

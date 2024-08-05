@@ -65,11 +65,19 @@ namespace my_expenses
         public void Delete_Click(object sender, EventArgs e)
         {
 
-            foreach (var item in Data.addGroupings)
+            for (int i = 1; i <= Data.Addcards.Count;)
             {
-                if (item.Name == NameGroupingBox.Text)
+                foreach (var item in Data.addGroupings)
                 {
-                    Data.addGroupings.Remove(item);
+                    if (item.Name == NameGroupingBox.Text)
+                    {
+                        Data.addGroupings.Remove(item);
+                        MessageBox.Show("سطر با موفقيت حذف گرديد", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    Grouping grouping = new Grouping();
+                    this.Close();
+                    break;
                 }
             }
         }
