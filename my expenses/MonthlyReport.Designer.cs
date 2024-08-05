@@ -57,7 +57,7 @@
             ChooseTheMonth.RightToLeft = RightToLeft.Yes;
             ChooseTheMonth.Size = new Size(121, 23);
             ChooseTheMonth.TabIndex = 0;
-            ChooseTheMonth.SelectedIndexChanged += ChooseTheMonth_SelectedIndexChanged;
+            
             // 
             // label1
             // 

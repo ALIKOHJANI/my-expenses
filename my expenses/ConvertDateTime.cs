@@ -21,6 +21,7 @@ namespace myExpenses
 
         private static int GetMonthNum(string iranianMonth)
         {
+            iranianMonth = iranianMonth.Replace(" ", "");
             switch (iranianMonth)
             {
                 case "فروردین":

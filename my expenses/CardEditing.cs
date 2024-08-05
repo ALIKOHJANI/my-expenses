@@ -20,20 +20,48 @@ namespace my_expenses
 
         public void backButton_Click(object sender, EventArgs e)
         {
-            MainPage mainPage = new MainPage();
-            mainPage.Show();
+            Cards cards = new Cards();
+            cards.Show();
             this.Close();
         }
 
         public void Delete_Click(object sender, EventArgs e)
         {
-            foreach (var item in Data.Addcards)
+            if (Data.Addcards.Count == 0)
             {
-                if (item.cardNumber == CardNumberBox.Text)
-                {
-                    Data.Addcards.Remove(item);
-                }
+                MessageBox.Show("موردي براي ويرايش وجود ندارد", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+
+
+            for (int i = 1; i <= Data.Addcards.Count;)
+            {
+                foreach (var item in Data.Addcards)
+                {
+                    if (item.cardNumber == CardNumberBox.Text)
+                    {
+                        if (item.cardNumber == CardNumberBox.Text)
+                        {
+                            Data.Addcards.Remove(item);
+                            MessageBox.Show("سطر با موفقيت حذف گرديد", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        Cards cards = new Cards();
+                        cards.Show();
+                        this.Close();
+                        break;
+                    }
+                    i++;
+                }
+
+            }
+        }
+
+
+        private void Entrybutton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

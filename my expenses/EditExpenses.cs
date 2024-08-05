@@ -31,19 +31,33 @@ namespace my_expenses
 
         public void Delete_Click(object sender, EventArgs e)
         {
-            foreach (var item in Data.expenses)
+            for (int i = 1; i <= Data.Addcards.Count;)
             {
-                if (item.Date == item.Date && item.cards == CardNumberBox.Text)
+                foreach (var item in Data.expenses)
                 {
-                    Data.expenses.Remove(item);
+                    if (item.Date == item.Date && item.cards == CardNumberBox.Text && item.Amount ==Convert.ToInt64( AmountBox.Text))
+                    {
+                        Data.expenses.Remove(item);
+                        MessageBox.Show("سطر با موفقيت حذف گرديد", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MainPage mainPage = new MainPage();
+                        mainPage.Show();
+                        this.Close();
+                        break;
+                    }
+
+                    i++;
+                    
                 }
+               
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MainPage MainPage = new MainPage();
-           
+            MainPage.Show();
+            this.Close();
+
         }
     }
 }

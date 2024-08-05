@@ -58,6 +58,7 @@
             Entrybutton.TabIndex = 14;
             Entrybutton.Text = "ثبت کارت";
             Entrybutton.UseVisualStyleBackColor = true;
+            Entrybutton.Click += Entrybutton_Click;
             // 
             // label3
             // 
