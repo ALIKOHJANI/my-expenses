@@ -59,8 +59,8 @@ namespace myExpenses
         private void AddingExpensesButton_Click(object sender, EventArgs e)
         {
 
-            AddcardService addcardClass = new AddcardService();
-            bool isValid = true;
+            
+            
             if (Data.Addcards.Count == 0)
             {
                 MessageBox.Show("کارتی ثبت نشده!لطفا کارت  اضافه کنید");
@@ -120,7 +120,7 @@ namespace myExpenses
             editExpenses.AmountBox.Text = dataGridView["Expenses", dataGridView.CurrentRow.Index].Value.ToString();
             editExpenses.GroupingBox.Text = dataGridView["Grouping", dataGridView.CurrentRow.Index].Value.ToString();
             editExpenses.CardNumberBox.Text = dataGridView["Card", dataGridView.CurrentRow.Index].Value.ToString();
-
+            this.Close();
             if (editExpenses.ShowDialog() == DialogResult.OK)
             {
                 dataGridView["AmountBox", dataGridView.CurrentRow.Index].Value = editExpenses.AmountBox.Text;

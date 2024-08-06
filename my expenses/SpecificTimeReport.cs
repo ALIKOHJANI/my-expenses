@@ -30,7 +30,7 @@ namespace myExpenses
             PersianCalendar pc = new PersianCalendar();
             var startDateTimeSplit = StartDateTextBox.Text.Split('/');
             var endDateTimeSplit = EndDateTextBox.Text.Split('/');
-
+            listMonthlyReport.Rows.Clear();
             DateTime StartDateTimeSplit = new DateTime(Convert.ToInt32(startDateTimeSplit[0]), Convert.ToInt32(startDateTimeSplit[1]), Convert.ToInt32(startDateTimeSplit[2]), pc);
             DateTime EndDateTimeSplit = new DateTime(Convert.ToInt32(endDateTimeSplit[0]), Convert.ToInt32(endDateTimeSplit[1]), Convert.ToInt32(endDateTimeSplit[2]), pc);
             foreach (var item in Data.expenses)
