@@ -48,7 +48,7 @@ namespace my_expenses
                     i++;
                     
                 }
-               
+                break; 
             }
         }
 
