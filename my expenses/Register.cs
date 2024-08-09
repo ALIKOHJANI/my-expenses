@@ -48,7 +48,7 @@ namespace myExpenses
                             if (string.IsNullOrEmpty((Controls[i] as MaskedTextBox).Text))
                             {
                                 isValid = false;
-                                (Controls[i] as MaskedTextBox ).BackColor = Color.Red;
+                                (Controls[i] as MaskedTextBox).BackColor = Color.Red;
                             }
                         }
 
@@ -69,8 +69,8 @@ namespace myExpenses
                     DateTime birthDate;
                     if (DateTime.TryParseExact(birthDateText, "yyyy/MM/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out birthDate))
                     {
-                        
-                       
+
+
                     }
                     else
                     {

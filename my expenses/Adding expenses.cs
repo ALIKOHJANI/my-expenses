@@ -20,7 +20,7 @@ namespace myExpenses
         }
         Expenses expenses = new Expenses();
 
-       
+
 
         private void BackButton_Click(object sender, EventArgs e)
         {
@@ -31,13 +31,13 @@ namespace myExpenses
 
         private void AmountBox_TextChanged(object sender, EventArgs e)
         {
-          
+
             //if (AmountBox.Text == "" || AmountBox.Text == "0") return;
             //decimal price;
             //price = decimal.Parse(AmountBox.Text, System.Globalization.NumberStyles.Currency);
             //AmountBox.Text = price.ToString("#,#");
             //AmountBox.SelectionStart = AmountBox.Text.Length;
-        }   
+        }
         private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             expenses.Grouping = GroupingBox.Text;
@@ -90,7 +90,7 @@ namespace myExpenses
 
         private void AddingExpenses_FormClosed(object sender, FormClosedEventArgs e)
         {
-          
+
 
         }
     }

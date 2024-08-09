@@ -48,7 +48,6 @@ namespace my_expenses
                 {
                     DescriptionBox.Text = Item.Description;
                 }
-
             }
         }
 
@@ -65,7 +64,7 @@ namespace my_expenses
         public void Delete_Click(object sender, EventArgs e)
         {
 
-            for (int i = 1; i <= Data.Addcards.Count;)
+            for (int i = 1; i <= Data.addGroupings.Count;)
             {
                 foreach (var item in Data.addGroupings)
                 {
@@ -76,6 +75,7 @@ namespace my_expenses
                     }
 
                     Grouping grouping = new Grouping();
+                    grouping.Show();
                     this.Close();
                     break;
                 }

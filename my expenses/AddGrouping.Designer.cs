@@ -41,6 +41,7 @@
             // 
             NameGroupingBox.Font = new Font("B Nazanin", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             NameGroupingBox.Location = new Point(45, 98);
+            NameGroupingBox.MaxLength = 10;
             NameGroupingBox.Name = "NameGroupingBox";
             NameGroupingBox.RightToLeft = RightToLeft.Yes;
             NameGroupingBox.Size = new Size(280, 30);

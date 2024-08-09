@@ -54,7 +54,7 @@ namespace myExpenses
                 {
                     if (item.Date >= StartDateTimeSplit && item.Date <= EndDateTimeSplit)
                     {
-                        if (item.cards == CardBox.Text )
+                        if (item.cards == CardBox.Text)
                         {
                             PersianCalendar DatePc = new PersianCalendar();
                             DateTime dateTime = item.Date;
@@ -64,7 +64,7 @@ namespace myExpenses
                             SumOfExpensesLabel.Text = sum.ToString();
                             SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
                         }
-                        if(item.Grouping == GroupingBox.Text)
+                        if (item.Grouping == GroupingBox.Text)
                         {
                             PersianCalendar DatePc = new PersianCalendar();
                             DateTime dateTime = item.Date;
@@ -108,6 +108,27 @@ namespace myExpenses
         private void SpecificTimeReport_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void GroupingBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar > 199 || e.KeyChar < 237)
+       && (e.KeyChar < 1574 || e.KeyChar > 1594 && e.KeyChar < 1601 || e.KeyChar > 1608)
+       && e.KeyChar != 1662 && e.KeyChar != 1668 && e.KeyChar != 1670 && e.KeyChar != 1705
+       && e.KeyChar != 1711
+       && e.KeyChar != 1740 && e.KeyChar != 8 && e.KeyChar != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CardBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+
             {
                 e.Handled = true;
             }
