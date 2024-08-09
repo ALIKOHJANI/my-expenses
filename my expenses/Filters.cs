@@ -13,7 +13,7 @@ namespace my_expenses
 
         //public List<Expenses> Filter(List<Expenses> filters)
         //{
-        //    return filters.Where(t => );
+        //    //return filters.Where(t => t.cards==);
 
         //}
     }

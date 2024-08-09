@@ -126,6 +126,7 @@
             GroupingBox.RightToLeft = RightToLeft.Yes;
             GroupingBox.Size = new Size(151, 23);
             GroupingBox.TabIndex = 8;
+            GroupingBox.KeyPress += GroupingBox_KeyPress;
             // 
             // label4
             // 
@@ -147,6 +148,7 @@
             CardBox.Name = "CardBox";
             CardBox.Size = new Size(138, 23);
             CardBox.TabIndex = 10;
+            CardBox.KeyPress += CardBox_KeyPress;
             // 
             // reportingButton
             // 

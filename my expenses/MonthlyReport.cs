@@ -58,7 +58,7 @@ namespace myExpenses
 
                 foreach (var item in Data.expenses)
                 {
-                    
+
                     (DateTime start, DateTime end) = ConvertDateTime.GetGregorianDates(ChooseTheMonth.Text);
 
                     if (item.Date >= start && item.Date <= end)
@@ -75,7 +75,7 @@ namespace myExpenses
                         }
                         if (item.Grouping == GroupingBox.Text)
                         {
-                            
+
                             Int64 sum = Data.expenses.Sum(c => c.Amount);
                             SumOfExpensesLabel.Text = sum.ToString();
                             SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
@@ -86,7 +86,7 @@ namespace myExpenses
                         }
                         if (GroupingBox.Text == null && CardBox.Text == null)
                         {
-                            
+
                             Int64 sum = Data.expenses.Sum(c => c.Amount);
                             SumOfExpensesLabel.Text = sum.ToString();
                             SumOfExpensesTEXT.Text = PersianNumberToString.GET_Number_To_PersianString(SumOfExpensesLabel.Text) + " " + "تومان";
@@ -98,6 +98,27 @@ namespace myExpenses
                         }
                     }
                 }
+            }
+        }
+
+        private void CardBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void GroupingBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar > 199 || e.KeyChar < 237)
+      && (e.KeyChar < 1574 || e.KeyChar > 1594 && e.KeyChar < 1601 || e.KeyChar > 1608)
+      && e.KeyChar != 1662 && e.KeyChar != 1668 && e.KeyChar != 1670 && e.KeyChar != 1705
+      && e.KeyChar != 1711
+      && e.KeyChar != 1740 && e.KeyChar != 8 && e.KeyChar != 32)
+            {
+                e.Handled = true;
             }
         }
     }

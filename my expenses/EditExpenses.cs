@@ -35,7 +35,7 @@ namespace my_expenses
             {
                 foreach (var item in Data.expenses)
                 {
-                    if (item.Date == item.Date && item.cards == CardNumberBox.Text && item.Amount ==Convert.ToInt64( AmountBox.Text))
+                    if (item.Date == item.Date && item.cards == CardNumberBox.Text && item.Amount == Convert.ToInt64(AmountBox.Text))
                     {
                         Data.expenses.Remove(item);
                         MessageBox.Show("سطر با موفقيت حذف گرديد", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -46,9 +46,9 @@ namespace my_expenses
                     }
 
                     i++;
-                    
+
                 }
-                break; 
+                break;
             }
         }
 

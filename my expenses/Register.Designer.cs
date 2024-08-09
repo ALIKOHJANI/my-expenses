@@ -130,6 +130,7 @@
             // 
             FirtsNameBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             FirtsNameBox.Location = new Point(38, 19);
+            FirtsNameBox.MaxLength = 10;
             FirtsNameBox.Name = "FirtsNameBox";
             FirtsNameBox.RightToLeft = RightToLeft.Yes;
             FirtsNameBox.Size = new Size(123, 23);
@@ -140,6 +141,7 @@
             // LastNameBox
             // 
             LastNameBox.Location = new Point(38, 53);
+            LastNameBox.MaxLength = 12;
             LastNameBox.Name = "LastNameBox";
             LastNameBox.RightToLeft = RightToLeft.Yes;
             LastNameBox.Size = new Size(123, 23);

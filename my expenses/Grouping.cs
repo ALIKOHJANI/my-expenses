@@ -62,10 +62,13 @@ namespace myExpenses
 
         private void GroupingBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             GroupingBox.SelectedIndex = GroupingBox.FindString(GroupingBox.Text);
             EditCategories editCategories = new EditCategories(GroupingBox.Text);
+            this.Close();
             editCategories.ShowDialog();
+
+           
         }
 
         private void Grouping_FormClosed(object sender, FormClosedEventArgs e)

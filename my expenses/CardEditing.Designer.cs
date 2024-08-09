@@ -74,6 +74,7 @@
             // CardNameBox
             // 
             CardNameBox.Location = new Point(12, 265);
+            CardNameBox.MaxLength = 10;
             CardNameBox.Name = "CardNameBox";
             CardNameBox.RightToLeft = RightToLeft.Yes;
             CardNameBox.Size = new Size(256, 23);

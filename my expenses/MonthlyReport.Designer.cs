@@ -57,7 +57,6 @@
             ChooseTheMonth.RightToLeft = RightToLeft.Yes;
             ChooseTheMonth.Size = new Size(121, 23);
             ChooseTheMonth.TabIndex = 0;
-            
             // 
             // label1
             // 
@@ -88,6 +87,7 @@
             CardBox.Name = "CardBox";
             CardBox.Size = new Size(138, 23);
             CardBox.TabIndex = 14;
+            CardBox.KeyPress += CardBox_KeyPress;
             // 
             // label3
             // 
@@ -111,6 +111,7 @@
             GroupingBox.RightToLeft = RightToLeft.Yes;
             GroupingBox.Size = new Size(151, 23);
             GroupingBox.TabIndex = 12;
+            GroupingBox.KeyPress += GroupingBox_KeyPress;
             // 
             // SumOfExpensesTEXT
             // 
